@@ -1,0 +1,63 @@
+
+# 2024-05-15 15:09:01.817816
++ChatTab.
+
+# 2024-05-15 15:09:38.483062
++`src/webview/pages/components/chatTab/ChatTab.tsx` add a button to export all conversations
+
+# 2024-05-15 15:28:16.923958
++/diff
+
+# 2024-05-15 15:28:22.926022
++/undo
+
+# 2024-05-15 15:33:59.561653
++ChatTab.ts
+
+# 2024-05-15 15:34:10.468543
++`src/webview/pages/components/chatTab/ChatTab.tsx` add a button to export all conversations
+
+# 2024-05-15 15:38:09.750822
++undo
+
+# 2024-05-15 15:38:27.172292
++/undo
+
+# 2024-05-15 15:38:35.492012
++/diff
+
+# 2024-05-15 15:38:41.808997
++/drop
+
+# 2024-05-15 15:39:19.385110
++/exit
+
+# 2024-05-15 15:44:19.122914
++`src/webview/pages/components/chatTab/ChatTabTutorial.tsx` make the indexcodebase button blue instead of orange, and make it a button
+
+# 2024-05-15 15:46:28.659489
++/undo
+
+# 2024-05-15 16:01:15.921296
++`src/webview/pages/components/chatTab/ChatTabStartBuild.tsx` `src/webview/pages/components/chatTab/ChatTabStartDefault.tsx` ChatTabTut
+
+# 2024-05-15 16:02:13.464876
++undo
+
+# 2024-05-15 16:02:20.358167
++/undo
+
+# 2024-05-15 16:11:48.139396
++Clicking “Build a Feature” will check if the codebase is indexed. If its not indexed, prompt the user to index their codebase.
+
+# 2024-05-15 16:19:17.979708
++/undo
+
+# 2024-05-15 16:21:36.686183
++Clicking “Build a Feature” will check if the codebase is indexed. If its not indexed, prompt the user to index their codebase.
+
+# 2024-05-15 16:30:35.168912
++Don't use react-boostrap, use NextUI
+
+# 2024-05-15 16:36:31.105235
++/undo

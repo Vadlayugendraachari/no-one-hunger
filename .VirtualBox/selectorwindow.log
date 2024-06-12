@@ -1,0 +1,20 @@
+00:00:02.315149 VirtualBox GUI VM Selector Window 7.0.14 r161095 win.amd64 (Jan 15 2024 14:59:30) release log
+00:00:02.315151 Log opened 2024-06-10T07:50:48.563863800Z
+00:00:02.315152 Build Type: release
+00:00:02.315155 OS Product: Windows 11
+00:00:02.315156 OS Release: 10.0.22631
+00:00:02.315157 OS Service Pack: 
+00:00:02.332443 DMI Product Name: ASUS TUF Gaming F15 FX506HC_FX506HC
+00:00:02.340440 DMI Product Version: 1.0
+00:00:02.340457 Firmware type: UEFI
+00:00:02.340818 Secure Boot: VERR_PRIVILEGE_NOT_HELD
+00:00:02.340838 Host RAM: 16122MB (15.7GB) total, 8664MB (8.4GB) available
+00:00:02.340842 Executable: C:\Program Files\Oracle\VirtualBox\VirtualBox.exe
+00:00:02.340843 Process ID: 19824
+00:00:02.340843 Package type: WINDOWS_64BITS_GENERIC
+00:00:02.340983 Qt version: 5.15.2
+00:00:02.341812 GUI: UIMediumEnumerator: Initial medium-enumeration finished!
+00:00:02.379991 GUI: UIMediumEnumerator: Medium-enumeration started...
+00:00:03.475720 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:02:48.819124 GUI: UICommon: Handling aboutToQuit request..
+00:02:49.230260 GUI: UICommon: aboutToQuit request handled!

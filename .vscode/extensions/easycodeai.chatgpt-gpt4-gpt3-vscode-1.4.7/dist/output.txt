@@ -1,0 +1,5027 @@
+<passage file_path=README.md>
+- “What does this application do?”
+- “How does the user registration work?”
+
+**Find code that you care about**
+- “Where is user authentication handled?”
+- "Where is the style for login button?"
+
+### **Other Features**
+
+<img src="https://github.com/chuangli94/easycode_assets/blob/main/context_menu.png?raw=true" width="50%">
+
+- **`Ask GPT` →** For open ended questions that are specific to the code you selected. Useful for questions that have a narrower scope.
+
+</passage><passage file_path=README.md>
+### AI that *understands your codebase*.
+
+<img src="https://storage.googleapis.com/easycode-assets/askCodebase.gif" width="80%">
+
+### ChatGPT whenever you need it.
+
+<img src="https://storage.googleapis.com/easycode-assets/askGPT.gif" width="80%">
+
+### Autocomplete to boost productivity.
+
+<img src="https://storage.googleapis.com/easycode-assets/autocomplete.gif" width="80%">
+
+## Getting Started - EasyCode
+
+### **Ask Codebase**
+- Check “Ask Codebase”, this will start indexing your codebase. <span style="color:red">Wait for indexing to finish</span>, as indicated by the notification on the bottom right.
+- De-select the folders/files that are not relevant to what you are interested in.
+
+<img src="https://storage.googleapis.com/easycode-assets/codebase-indexing.png" width="80%">
+
+**Generate code based on your existing codebase**
+- “What are the changes needed to do (insert feature) ?”
+- “How do I implement (inser idea)?”
+
+**Understand any codebase**
+- “What does this application do?”
+
+</passage><passage file_path=vsc-extension-quickstart.md>
+# Welcome to your VS Code Extension
+
+## What's in the folder
+
+* This folder contains all of the files necessary for your extension.
+* `package.json` - this is the manifest file in which you declare your extension and command.
+  * The sample plugin registers a command and defines its title and command name. With this information VS Code can show the command in the command palette. It doesn’t yet need to load the plugin.
+* `src/extension.ts` - this is the main file where you will provide the implementation of your command.
+  * The file exports one function, `activate`, which is called the very first time your extension is activated (in this case by executing the command). Inside the `activate` function we call `registerCommand`.
+  * We pass the function containing the implementation of the command as the second parameter to `registerCommand`.
+
+## Setup
+
+* install the recommended extensions (amodio.tsl-problem-matcher and dbaeumer.vscode-eslint)
+
+
+## Get up and running straight away
+
+* Press `F5` to open a new window with your extension loaded.
+
+</passage><passage file_path=src/webviewProvider/legacyWebviewViewProvider.ts>
+<div><b>&nbsp&bull;&nbsp&nbsp&nbsp<i>Ask GPT</i></b> -> For open ended questions that are specific to the code you selected. Useful for questions that have a narrower scope.</div>
+						<br>
+						<div><b>&nbsp&bull;&nbsp&nbsp&nbsp<i>Ask GPT: Fix Bug</i></b> -> Try to determine and fix the error in the code.</div>
+						<br>
+						<div><b>&nbsp&bull;&nbsp&nbsp&nbsp<i>Ask GPT: What does this do?</i></b> -> Explains in detail what the selected code is doing. Useful for code that’s hard to read for various reasons (unfamiliar language, next level regex, yaml/config files, etc).</div>
+						<br>
+						<div><b>&nbsp&bull;&nbsp&nbsp&nbsp<i>Ask GPT: How is this code used?</i></b> -> Explains the usages of code, i.e. how the code affects or is affected by other parts of codebase.</div>
+						<br>
+						<div><b>&nbsp&bull;&nbsp&nbsp&nbsp<i>Ask GPT: Refactor Code</i></b> -> Refactor the selected code block</div>
+						<br>
+</passage><passage file_path=package.json>
+        "steps": [
+          {
+            "id": "askCodebase",
+            "title": "Ask Codebase Related Question",
+            "description": "EasyCode answers questions using your own codebase as context.",
+            "media": {
+              "markdown": "walkthroughs/askCodebase.md"
+            }
+          },
+          {
+            "id": "refineContext",
+            "title": "Refine Codebase Context (Experimental)",
+            "description": "Control what EasyCode uses as context.",
+            "media": {
+              "markdown": "walkthroughs/refineContext.md"
+            }
+          },
+          {
+            "id": "askGPT",
+            "title": "Ask ChatGPT a Question",
+            "description": "Ask ChatGPT any question, with follow ups and chat history.",
+            "media": {
+              "markdown": "walkthroughs/askGPT.md"
+            }
+          },
+          {
+
+</passage><passage file_path=package.json>
+  "contributes": {
+    "commands": [
+      {
+        "command": "easycode.addFunctionLogPoints",
+        "title": "Add Log Points to All Functions"
+      },
+      {
+        "command": "easycode.showFunctionCalls",
+        "title": "Show logged function calls"
+      },
+      {
+        "command": "easycode.generateCommitMessage",
+        "title": "EasyCode: Create Commit Message"
+      },
+      {
+        "command": "easycode.ask",
+        "title": "Ask GPT"
+      },
+      {
+        "command": "easycode.fixBug",
+        "title": "Ask GPT: Fix Bug"
+      },
+      {
+        "command": "easycode.explain",
+        "title": "Ask GPT: What does this do?"
+      },
+      {
+        "command": "easycode.explainFileFlow",
+        "title": "Ask GPT: What does this file do?"
+      },
+      {
+        "command": "easycode.refactorCode",
+        "title": "Ask GPT: Refactor Code"
+      },
+      {
+        "command": "easycode.writeUnitTests",
+        "title": "Ask GPT: Write Unit Tests"
+      },
+      {
+
+</passage><passage file_path=walkthroughs/learn-more.md>
+## Additional Features
+
+<img src="https://storage.googleapis.com/easycode-assets/easycode-context.png" alt="Context Menu">
+
+**Ask GPT (context menu)**
+
+Select some code in the editor, right click, and choose “Ask GPT”. It’s used to ask a question or give a command that’s specific to the code you selected. 
+
+**Ask GPT: What does this do?**
+
+Explains in detail what the code is doing. Useful for code that’s hard to read for various reasons (unfamiliar language, next level regex, yaml/config files, etc).
+
+**Ask GPT: Refactor Code** 
+
+Refactor the selected code block.
+
+**Ask GPT: Write Unit Tests** 
+
+Write unit tests for the selected code block
+
+**Ask GPT: Write Code**
+
+Get code suggestion that are specific to the code you selected. For example:
+- “Modify a function so that it does ____”
+- “Write a test case that tests _____”
+- “Write documentation for this function”
+
+## Settings
+
+EasyCode settings can be accessed by clicking the “Settings” button above the question box. 
+
+### **EasyCode: Copy On Click**
+
+</passage><passage file_path=src/webviewProvider/legacyWebviewViewProvider.ts>
+this.getMixPanel()?.track('Ask Internet', {
+								distinct_id: this.getMachineId(),
+								prompt: data.value
+							});
+							if (Globals.getSettings().usePromptAssistant == true){
+								let goodPrompt = await this.assessPrompt(data.value);
+								if (goodPrompt == 'false'){
+									this._view?.webview.postMessage({ type: 'openPromptAssistant', isAskCodebase: false});
+									this.createPromptSuggestions(data.value, data.tabIndex, false);
+									return;
+								}
+							}
+							this.ask(data.value, data.tabIndex, true, false, false);
+							break;
+						}
+					case 'get-project-directory-files':
+						{
+							getAndRenderProjectDirectoryFiles(this);
+							break;
+						}
+					case 'check-codebase-index':
+						{
+							/*
+							checkCodebaseIndex(this);
+							*/
+							break;
+						}
+					case 'index-codebase':
+						{
+							this.getMixPanel()?.track('Index Codebase', {
+								distinct_id: this.getMachineId()
+							});
+							/*
+							indexCodebase(data.refreshDirectory, this)
+</passage><passage file_path=src/modules/indexCodebase.ts>
+import { addAllFilesToNodeSelectedMap, collectFileNodes, processFilesToNestedStructure } from '../helpers/fileNodeUtils';
+
+import { createPrompt } from '../helpers/prompt';
+import { easycode_url } from '../keys';
+import { createCodeLensProvider } from './codeLensProvider';
+import { createCacheGhRepoTask, getGhRepoCachePath, getGhRepoRootIdentifier } from '../helpers/githubCodebaseIndex';
+import {
+	createSentryRewriteFramesIntegration,
+	createSentryTags,
+	createSentryUser,
+	initializeExtensionSentry,
+} from '../sentry/node-extension-telemetry';
+import { jsonrepair } from 'jsonrepair'
+import { jaccardDistance } from '../helpers/jaccardDistance';
+import { createOrUpdateDiffView } from './diffViewProvider';
+import { renderWebview } from '../webviewProvider/Webview';
+
+import type { Ignore } from 'ignore';
+import type vscode175 from 'vscode-1-75';
+import type { ChatCompletionResponseMessage, ChatCompletionFunctions } from 'openai';
+import { EasyCodeClient, createEasyCodeClient } from '../apis/extensionToServerApi';
+import type { ExtensionToWebviewMessage, ValidWebviewMessage, WebviewToExtensionMessage } from '../types/webviewToExtensionTypes';
+
+</passage><passage file_path=src/chat/chats/twoStepCodebasePlanningAndImplementationChat.ts>
+            if (this.aiImplementationPlan){
+                if (this.filePaths && this.fileContents){
+                    let curStepImplementationPlan = 'Implementation Plan:\n\n' + this.aiImplementationPlan + '\n\nFile Interface:' + this.selectedCodebaseContent.selectedAllFileSummaries + '\n\nRequest:\n\n' + this.userImplementationQuery;
+                    if (curStepImplementationPlan){
+
+</passage><passage file_path=README.md>
+- **`Ask GPT` →** For open ended questions that are specific to the code you selected. Useful for questions that have a narrower scope.
+
+- **`Ask GPT: What does this do?` →** Explains in detail what the code is doing. Useful for code that’s hard to read for various reasons (unfamiliar language, next level regex, yaml/config files, etc).
+
+- **`Ask GPT: How is this method used?` →** Explains the usages of the method, ie how the method affects or is affected by other parts of codebase.
+
+- **`Ask GPT: How is this file used?` →** Similar to “How is this method used”, but for a file or class.
+
+- **`Ask GPT: Write Code` →** Get code suggestion that are specific to the code you selected. For example
+    - “Modify a function so that it does ____”
+    - “Write a test case that tests _____”
+    - “Write documentation for this function”
+
+- **`GPT: Explain Stack Trace` →** Analyze stack trace errors to figure out the cause
+
+**`GPT: Index Codebase` →** Allows for re-indexing of codebase, or indexing a different part of the codebase.
+
+</passage><passage file_path=CHANGELOG.md>
+- Added Ask GPT: Explain how this is used so it uses ask codebase
+    - This is meant to be a high level explanation of a local piece of the code
+
+</passage><passage file_path=src/extension.ts>
+import type vscode175 from 'vscode-1-75';
+import type { ExtendedWebviewViewProvider } from './types/types';
+import { LegacyWebviewViewProvider } from './webviewProvider/legacyWebviewViewProvider';
+import { createWebviewViewProvider } from './webviewProvider/reactWebviewViewProvider';
+import { Globals } from './config/globals';
+import { INDEXABLE_EXTENSIONS, findIndexableFiles } from './modules/indexCodebase';
+import path from 'node:path';
+import { createEasyCodeClient } from './apis/extensionToServerApi';
+import { OpenAIClient, createOpenAIClient } from './apis/openaiClient';
+import FormData from 'form-data';
+import { EasyCodeChatMessage } from './types/chatMessage';
+
+initializeExtensionSentry();
+</passage><passage file_path=src/chat/chats/twoStepCodebasePlanningAndImplementationChat.ts>
+            }
+        }
+        //if we are implementing, we need to update the high level plan if the user makes adjustments
+        else if (this.currentPhaseIndex > 0){
+
+</passage><passage file_path=src/apis/extensionToServerApi.ts>
+  getCodebaseContentForInput: (arg: {input:string, model:string, maxChunks?:number, generateQuestions?:boolean, queryType?: string }) => Promise<SelectedCodebaseContent | undefined>,
+  findClosestCodebaseChunkOrFileSummary: (arg: {text:string, selectedCodebaseContent: SelectedCodebaseContent}) => Promise<ClosestCodeChunkOrFileSummary | undefined>,
+  isCodebaseIndexed: (arg: {root_identifiers: string[]}) => Promise<boolean>,
+  indexCodebase: (arg: {file_read_streams: ReadStream[], file_paths: string[], workspace_path: string, on_progress?: (increment: number) => void, force_full_index?: boolean}) => Promise<void>,
+  abortAllStreams: () => Promise<void>,
+  extractFilePathsFromPlan: (arg: {message:string, instruction:string}) => Promise<string>,
+  generateCodeDiff: (arg: {source_code: string, instruction:string, ai_response?:string}) => AsyncGenerator<string, void, unknown>,
+  //streamChatResponse: (arg: { streamId: string }) => AsyncGenerator<string, void, unknown>
+};
+
+</passage><passage file_path=CHANGELOG.md>
+- Improved Ask Codebase Algorithm
+    - It is more intelligent on a high level understanding
+    - Ask Codebase will no longer work for projects with over 200 files
+        - Indexing codebase will now error out for projects that are too large
+- Added Claude-Instant-1 as a model option
+    - It is limited to 32k context
+    - The primary purpose of this model is for ask codebase and web search
+    - Rate limit is set at 5 / 20 minutes
+- Adjusted GPT-3.5 rate limit to be 10 / 20 minutes
+    - GPT-3.5-Pro plan now offers unlimited Claude-Instant-1
+- Removed Explain Stack Trace Context Menu Option
+    - This had low usage
+- Removed Ask GPT: Explain how this method is being used
+    - This had low usage and was not working without language packs
+- Added Ask GPT: Fix Bug Context Menu Option
+    - This is meant to be a convenience command since we are seeing many people trying to debug their code
+- Added Ask GPT: Explain how this is used so it uses ask codebase
+
+</passage><passage file_path=src/chat/chats/twoStepCodebasePlanningAndImplementationChat.ts>
+            if (this.selectedCodebaseContent){
+                if (this.filePaths && this.fileContents){
+                    let isFileAlreadyInExistingExtractions = this.filePaths.every(filePath => implementationCodingPhase.filePaths.some(existingFilePath => existingFilePath.includes(filePath)));
+                    if (!isFileAlreadyInExistingExtractions){
+
+</passage><passage file_path=src/webviewProvider/legacyWebviewViewProvider.ts>
+<br>
+						-->
+						<h1>Chat Features:</h1>
+						<br>
+						<div class="flex items-center">
+							<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-question-square" viewBox="0 0 17 17">
+								<path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+							</svg>
+							&nbsp&nbsp&nbsp&nbsp
+							<div>
+								<b><i>Ask GPT</i></b> -> ChatGPT in your IDE. Good for understanding concepts that are general, not related to your codebase.
+							</div>
+						</div>
+						<br>
+						<div class="flex items-center">
+							<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-code-square" viewBox="0 0 17 17">
+</passage><passage file_path=walkthroughs/askCodebase.md>
+## Ask Codebase a Question
+
+<img src="https://storage.googleapis.com/easycode-assets/askCodebase.gif" alt="Ask Codebase Related Questions">
+
+EasyCode knows about your codebase and uses relevant context to provide answers that are tailored to your project's code and dependencies. Useful for code suggestions, codebase understanding, and code search in a large repo.
+</passage><passage file_path=CHANGELOG.md>
+    - This is meant to be a high level explanation of a local piece of the code
+
+## [1.0.4]
+
+- Added a web browsing feature
+    - This cannot be used on the free rate-limited GPT-4
+- Added an insert code button and diff view button to code blocks
+
+## [1.0.3]
+
+- Switched default model to GPT-4 (rate-limited)
+
+## [1.0.2]
+
+- Added better error logging for client side
+
+## [1.0.1]
+
+- Fixed a bug with .gitignore support
+
+## [1.0.0]
+
+- Prompt Assist now works with ask codebase
+    -It will ask codebase relevant questions
+- Prompt Ideas will now be specific to codebase when ask codebase is selected
+- Improved high level project understanding of ask codebase
+- Fixed a UI bug with Ask Codebase icon being larger than other icons in the home page
+- Fixed a bug with prompt ideas not showing properly on light theme
+
+## [0.9.9]
+
+- Added an option to automatically use the code in the active editor view as context
+- Fixed a bug with the chat scrolling to the very top when there are large inputs
+
+## [0.9.8]
+
+- [EXPERIMENTAL] Added a prompt assistant to help guide vague prompts into specific ones
+
+</passage><passage file_path=src/apis/extensionToServerApi.ts>
+import { search_and_replace_schema_no_analysis } from '../chat/agents/function_schemas/function_schemas';
+import { charIdxToCoordIdxs, coordIdxsToCharIdx } from '../helpers/utils';
+import { findCallGraphNode, fillMissingMethodsInChunks, fillingCallGraphData, removeCallerIfNecessary, hasParentInChunksMap, resolveCallerStructure } from '../modules/callGraph';
+import lodash from 'lodash';
+import { stringify } from 'flatted';
+
+const fs = require('fs');
+const os = require('os');
+const path = require('path');
+
+const SECRET_ACCESS_TOKEN = 'easycode-api-accessToken';
+const SECRET_REFRESH_TOKEN = 'easycode-api-refreshToken';
+let eventSource: EventSource;
+
+const isTokenValid = async (baseUrl: string, accessToken?: string) => {
+
+</passage><passage file_path=src/extension.ts>
+if (userEmail){
+		const sentryUser = createSentryUser({ email: userEmail });
+		Sentry.setUser(sentryUser);
+	}
+
+	const pid = process.pid;
+	console.log(`Current PID: ${pid}`);
+
+	logOutputChannel = vscode.window.createOutputChannel('Function Runtime Logs');
+    context.subscriptions.push(logOutputChannel);
+
+	context.subscriptions.push(vscode.commands.registerCommand('easycode.addFunctionLogPoints', async function () {
+		// Check if there is an open workspace
+		if (!vscode.workspace.workspaceFolders) {
+			vscode.window.showInformationMessage('Open a workspace to insert log points.');
+			return;
+		}
+
+		// Define a regex pattern to match function declarations
+		//const functionNameRegex = /(?:function\s+|public\s+)([^(\s]+)\(/g;
+		const functionNameRegex = /(?:function\s+|public\s+|public async\s+)([^(\s]+)\(|const\s+([^=\s]+)\s*(?::\s*[^=]+?)?=\s*(?:async\s+)?\(/g;
+
+		// Search for all JavaScript and TypeScript files in the workspace
+
+		const workspaceFolders = vscode.workspace.workspaceFolders;
+</passage><passage file_path=src/chat/chats/codebaseImplementationChat.ts>
+export class CodebaseImplementationChat extends BaseChat {
+
+    constructor(
+        {
+            type = ChatType.codebaseImplementation,
+            phases = [new CodebaseImplementationPhase()],
+            currentPhaseIndex = 0,
+            title = '',
+            actions = [ChatAction.startNextFileImplementation]
+        }: Partial<CodebaseImplementationChat> = {}
+    ) {
+        super({ type, phases, currentPhaseIndex, title, actions });
+    }
+
+    public override async *evokeAction(action: ChatAction){
+        if (action == ChatAction.startNextFileImplementation){
+            let codebaseImplementationPhase = this.phases[this.currentPhaseIndex] as CodebaseImplementationPhase;
+
+            for await (let { message, messageIndex } of codebaseImplementationPhase.submitChatMessage("continue", "gpt-4-1106-preview", true)) {
+                yield { message, messageIndex };
+            }
+        }
+    }
+
+}
+
+export default CodebaseImplementationChat;
+
+</passage><passage file_path=src/extension.ts>
+Globals.setEasyCodeClient(createEasyCodeClient(context, easycode_url));
+	Globals.setOpenAIClient(createOpenAIClient(Globals.getSettings().openAIApiKey));
+
+	newWebviewViewProvider = createWebviewViewProvider(context);
+	context.subscriptions.push(
+		vscode.window.registerWebviewViewProvider(LegacyWebviewViewProvider.viewType, newWebviewViewProvider,  {
+			webviewOptions: { retainContextWhenHidden: true },
+		}),
+	);
+
+	const inLineProvider = {
+        provideInlineCompletionItems: async (document:any , position:any , context: any, token: any) => {
+
+			if (!Globals.getSettings().inlineCompletion) {
+				return [];
+			}
+
+			const line = document.lineAt(position.line);
+			const nextChar = line.text.charAt(position.character);
+			const editor = vscode.window.activeTextEditor;
+			if (!editor) {
+				return [];
+			}
+</passage><passage file_path=src/apis/extensionToServerApi.ts>
+            } else {
+                on_progress?.(parseInt(data.text));
+            }
+        });
+        }
+
+
+      });
+
+      return indexPromise;
+    },
+    async canUsePlaceholder() {
+      const response = await axios.get(`/does_vsc_registration_machine_id_exist?unique_machine_id=${encodeURIComponent(vscode.env.machineId)}`, {
+        baseURL: baseUrl,
+      });
+      const nonPlaceholderExists = response.data.exists === 'true';
+      return !nonPlaceholderExists;
+    },
+    async forgotPassword({email}){
+      const formData = new FormData();
+      formData.append('email', email);
+
+      await axios.post('/password-reset/', formData, {
+        baseURL: baseUrl,
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+
+      return true;
+    }
+  };
+
+</passage><passage file_path=walkthroughs/learn-more.md>
+### **EasyCode: Copy On Click**
+
+When this is checked, all the code inside a code block returned by EasyCode will be automatically copied to clipboard. 
+
+If you want finer control in terms of what to copy, leave this unchecked. When it’s unchecked, you can manually copy the section you want by selecting the code, and copying it. 
+
+### **EasyCode: Max Tokens**
+
+To have a larger context, set this lower! This is the maximum token for generating output. So the larger it is, the smaller your input (prompt) context will be. 
+
+### **EasyCode > Prompt Prefix**
+
+These are the prompts that are sent when you choose the ask GPT the various questions. You can customize these prompts to get your desired outcome.
+
+## Need help?
+
+- Post your question in [Discord](https://discord.com/invite/VgE3tQuKrg) (fastest) or
+- Email **support@easycode.ai** or
+- Submit a [support ticket](https://tally.so/r/n9X2YY)
+
+</passage><passage file_path=vsc-extension-quickstart.md>
+* Press `F5` to open a new window with your extension loaded.
+* Run your command from the command palette by pressing (`Ctrl+Shift+P` or `Cmd+Shift+P` on Mac) and typing `Hello World`.
+* Set breakpoints in your code inside `src/extension.ts` to debug your extension.
+* Find output from your extension in the debug console.
+
+## Make changes
+
+* You can relaunch the extension from the debug toolbar after changing code in `src/extension.ts`.
+* You can also reload (`Ctrl+R` or `Cmd+R` on Mac) the VS Code window with your extension to load your changes.
+
+
+## Explore the API
+
+* You can open the full set of our API when you open the file `node_modules/@types/vscode/index.d.ts`.
+
+## Run tests
+
+* Open the debug viewlet (`Ctrl+Shift+D` or `Cmd+Shift+D` on Mac) and from the launch configuration dropdown pick `Extension Tests`.
+
+</passage><passage file_path=src/chat/chats/diffCodebaseImplementationChat.ts>
+export class DiffCodebaseImplementationChat extends BaseChat {
+
+    constructor(
+        {
+            type = ChatType.codebaseDiffImplementation,
+            phases = [new CodebaseDiffImplementationPhase()],
+            currentPhaseIndex = 0,
+            title = '',
+            actions = [ChatAction.startNextFileImplementation]
+        }: Partial<DiffCodebaseImplementationChat> = {}
+    ) {
+        super({ type, phases, currentPhaseIndex, title, actions });
+    }
+
+    public override async *evokeAction(action: ChatAction){
+        if (action == ChatAction.startNextFileImplementation){
+            for await (let { message, messageIndex } of this.submitChatMessage("continue", "gpt-4-1106-preview", true)) {
+                yield { message, messageIndex };
+            }
+        }
+    }
+
+    public override async *submitChatMessage(content:string, model:string, doNotEchoOrStore?: boolean){
+
+</passage><passage file_path=package.json>
+  "activationEvents": [
+    "onStartupFinished",
+    "onView:easycode.chatView",
+    "onCommand:easycode.ask",
+    "onCommand:easycode.fixBug",
+    "onCommand:easycode.explain",
+    "onCommand:easycode.explainFileFlow",
+    "onCommand:easycode.explainMethodFlow",
+    "onCommand:easycode.refactorCode",
+    "onCommand:easycode.writeUnitTests",
+    "onCommand:easycode.indexCodebase",
+    "onCommand:easycode.inlineCompletion"
+  ],
+  "main": "./dist/main.extension.js",
+  "sideEffects": false,
+  "contributes": {
+
+</passage><passage file_path=src/chat/phases/twoStepCodebaseImplementationPhase.ts>
+    }
+
+    public async *startImplementationPlan(){
+        let agent = this.agents[0];
+        let userMessage: EasyCodeChatMessage = {
+            role: 'user',
+            content: this.implementationPlan
+        };
+        let aiMessage: EasyCodeChatMessage = {
+            role: 'assistant',
+            content: 'Ok, let us begin.'
+        }
+        //This needs to be manually triggered so we can append the additional message afterwards
+
+        await agent.createChatMessages([userMessage]);
+        agent.llmChatHistory.push(aiMessage);
+        let filePathsAndContents = ''
+        for (let filePathIndex = 0; filePathIndex < this.filePaths.length; filePathIndex++){
+            let filePath = this.filePaths[filePathIndex];
+            let fileContent = this.fileContents[filePathIndex];
+            filePathsAndContents = filePathsAndContents + '<Existing File: ' + filePath + '>\n\n' + fileContent + '\n\n</Existing File>\n\n';
+        }
+        try {
+
+</passage><passage file_path=src/chat/agents/function_schemas/function_schemas.ts>
+    description: "Make edits to the code file by listing all sections that should receive changes and the changes to be made in each section. Be sure to consider all imports that are required to complete the task.",
+}
+
+</passage><passage file_path=src/modules/indexCodebase.ts>
+    } else {
+
+        provider.getWebView()?.webview.postMessage({ type: 'clearResponse', tabIndex: 0  });
+        provider.getWebView()?.webview.postMessage({ type: 'addResponse', value: 'You must have a project open before this can be used.', tabIndex: 0 });
+
+    }
+
+</passage><passage file_path=src/webview/index.tsx>
+root.render(
+  // <StrictMode>
+    <SentryReact.ErrorBoundary fallback={<p>An error has occurred</p>}>
+      <ReduxProvider store={store}>
+        <NextUIProvider>
+          <div className="flex flex-col h-screen w-screen text-foreground bg-background overflow-x-hidden">
+            <EditorContextMenuListener />
+            <RouterProvider router={router} future={{ v7_startTransition: true }} fallbackElement={<Spinner label="Loading" className="m-auto" />} />
+          </div>
+        </NextUIProvider>
+      </ReduxProvider>
+    </SentryReact.ErrorBoundary>
+  // </StrictMode>,
+);
+
+</passage><passage file_path=src/modules/indexCodebase.ts>
+import * as vscode from 'vscode';
+
+import fs, { ReadStream } from 'node:fs';
+import crypto from 'node:crypto';
+import path from 'node:path';
+import { TextDecoder, TextEncoder, deprecate } from 'node:util';
+import child_process from 'node:child_process';
+import os from 'node:os';
+
+import * as Sentry from '@sentry/node';
+import { ChatCompletionRequestMessage, Configuration, OpenAIApi } from 'openai';
+import { get_encoding } from '@dqbd/tiktoken';
+import axios from 'axios';
+import EventSource from 'eventsource';
+import ReconnectingEventSource from 'reconnecting-eventsource';
+import * as fglob from 'fast-glob';
+import debounce from 'lodash/debounce';
+import ignore from 'ignore';
+import winston from 'winston';
+import LogzioWinstonTransport from 'winston-logzio';
+import { v4 as uuidv4 } from 'uuid';
+import FormData from 'form-data';
+import Mixpanel from 'mixpanel';
+import { PythonExtension, PVSC_EXTENSION_ID } from '@vscode/python-extension';
+import { addAllFilesToNodeSelectedMap, collectFileNodes, processFilesToNestedStructure } from '../helpers/fileNodeUtils';
+
+</passage><passage file_path=src/webview/pages/data/layout.ts>
+const loader: LoaderFunction = async ({ request }) => {
+  const isLoggedInPromise = store.dispatch(webviewToExtensionApi.endpoints.isLoggedIn.initiate(undefined, {
+    forceRefetch: true,
+  }));
+  const { data: { isLoggedIn = false } = {} } = await isLoggedInPromise;
+  isLoggedInPromise.unsubscribe();
+
+  if (isLoggedIn && new URL(request.url).pathname.startsWith('/auth')) {
+    return redirect('/chat');
+  }
+
+  if (!isLoggedIn && !new URL(request.url).pathname.startsWith('/auth')) {
+    return redirect('/auth');
+  }
+
+  // fetch profile to confirm access
+  if (isLoggedIn) {
+    const userProfilePromise = store.dispatch(webviewToExtensionApi.endpoints.getUserProfile.initiate());
+    const profile = await userProfilePromise;
+    userProfilePromise.unsubscribe();
+
+    if (profile.status === QueryStatus.rejected || !profile.data?.user) {
+      // TODO: trigger logout
+      return redirect('/auth');
+    }
+
+    return json<JsonType<'isLoggedIn' | 'getUserProfile'>>({
+      isLoggedIn: { data: { isLoggedIn } },
+      getUserProfile: { data: profile.data },
+    });
+  }
+
+  return json<JsonType<'isLoggedIn'>>({ isLoggedIn: { data: { isLoggedIn: false } } });
+
+</passage><passage file_path=src/webview/index.tsx>
+import { NextUIProvider, Spinner } from '@nextui-org/react';
+
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { Provider as ReduxProvider } from 'react-redux';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
+import { store } from './redux/store';
+import { routes } from './routes';
+import { EditorContextMenuListener } from './components/EditorContextMenuListener';
+import * as SentryReact from "@sentry/react"
+import {
+  initializeReactWebviewSentry,
+} from '../sentry/react-webview-telemetry';
+
+import './css/index.css';
+
+initializeReactWebviewSentry();
+
+const rootElement = document.getElementById('root') as HTMLDivElement;
+
+const setDark = () => {
+
+</passage><passage file_path=src/chat/agents/function_schemas/function_schemas.ts>
+        properties: {
+            current_file: {
+                type: "string",
+                description: "Identify the current file that needs to be changed.",
+            },
+            analysis_and_identification: {
+                type: "string",
+                description: "Identify and list the minimal changes that need to be made to the file, by listing all locations that should receive these changes and the changes to be made. Be sure to consider all imports that are required to complete the task.",
+            },
+            replaces_to_make: {
+
+</passage><passage file_path=src/modules/fileSkeleton.ts>
+                } else {
+                    const fileMethods = fileData.methods;
+                    const specifiedMethod = fileMethods.find((item: any) => {
+                        const methodString = item.method_name + item.method_parameters.replace(/\s/g, '')
+                        return fileStructure.methodName === methodString;
+                    });
+                    const lines = content.split('\n');
+                    const scope = specifiedMethod.scope;
+                    const callGraph = await getCallGraphMapMetadata(absoluteFilePath, specifiedMethod.method_name + specifiedMethod.method_parameters)
+                    if (callGraph) {
+                        result += await appendCallGraphContent(callGraph, 0, rootPath)
+                    }
+                    if (scope) {
+
+</passage><passage file_path=src/webview/redux/webviewToExtensionApi.ts>
+    getUserProfile: builder.query<{ user: EasyCodeUser }, void>({
+      query() {
+        return {
+          type: "user-profile",
+        };
+      },
+      // profile fetch is slow, use a long cache ttl
+      keepUnusedDataFor: Infinity,
+      providesTags: ["User"],
+    }),
+    goToCode: builder.query<
+      void,
+      { text: string; isFileName: boolean; tabId: string; messageIndex: number }
+    >({
+      query(data) {
+        return {
+          type: "go-to-code",
+          data,
+        };
+      },
+    }),
+    openUpgradeExternalLink: builder.mutation<
+      void,
+      { plan: string; user: EasyCodeUser }
+    >({
+      query(data) {
+        return {
+          type: "open-upgrade-external-link",
+          data,
+        };
+      },
+    }),
+    openManageSubscriptionExternalLink: builder.mutation<
+      void,
+      { user: EasyCodeUser }
+    >({
+      query(data) {
+        return {
+          type: "open-manage-subscription-external-link",
+          data,
+        };
+      },
+    }),
+    setModel: builder.mutation<void, { model: string }>({
+
+</passage><passage file_path=src/chat/chats/diffCodebaseImplementationChat.ts>
+import * as vscode from 'vscode';
+import { debounce, doesMessageContainFilePath, extractFileContentsFromMessageContainingFilePaths, partialParseJson } from "../../helpers/utils";
+import { createOrUpdateDiffView, extractFirstBlockAbovePlus, extractFirstPlusBlock, removeExclamationFromStartIfExists, removePlusAndExclamationFromStartIfExists, selectFirstMatchInDocument, showApplyChangesNotification } from "../../modules/diffViewProvider";
+import { Chat, ChatAction, ChatType } from "../../types/chat";
+import { ChatPhase } from "../../types/chatPhase";
+import BaseChat from "./baseChat";
+import AskCodebasePhase from "../phases/askCodebasePhase";
+import BasePhase from "../phases/basePhase";
+import CodebaseDiffImplementationPhase from "../phases/codebaseDiffImplementationPhase";
+import CodebaseExplainPhase from "../phases/codebaseExplainPhase";
+import CodebaseDiffPerFileImplementationAgent from '../agents/codebaseDiffPerFileImplementationAgent';
+import { EasyCodeChatMessage } from '../../types/chatMessage';
+
+export class DiffCodebaseImplementationChat extends BaseChat {
+
+</passage><passage file_path=src/chat/phases/twoStepCodebaseImplementationPhase.ts>
+export class TwoStepCodebaseImplementationPhase extends BasePhase {
+    public implementationPlan: string;
+    public pastMessagesWithoutFileContent: EasyCodeChatMessage[];
+    public filePaths: string[];
+    public fileContents: string[];
+    public selectedCodebaseContent: SelectedCodebaseContent;
+    constructor(
+
+</passage><passage file_path=src/webview/redux/store.ts>
+import { configureStore } from '@reduxjs/toolkit';
+import { setupListeners } from '@reduxjs/toolkit/query';
+import { webviewToExtensionApi } from './webviewToExtensionApi';
+import { askCodebaseChecked, askWebChecked, inputText, followUpInputText } from './uiActions';
+import { errorModal } from './error';
+
+export const store = configureStore({
+  reducer: {
+    [webviewToExtensionApi.reducerPath]: webviewToExtensionApi.reducer,
+    firstMessageInputText: inputText.reducer,
+    followUpMessageInputText: followUpInputText.reducer,
+    firstMessageAskCodebaseChecked: askCodebaseChecked.reducer,
+    firstMessageAskWebChecked: askWebChecked.reducer,
+    errorState: errorModal.reducer,
+  },
+  middleware: (getDefaultMiddleware) => (
+    getDefaultMiddleware().concat(webviewToExtensionApi.middleware)
+  ),
+});
+
+setupListeners(store.dispatch);
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
+
+</passage><passage file_path=src/chat/chats/baseChat.ts>
+        }); // Deep copy of phases
+        this.currentPhaseIndex = currentPhaseIndex;
+        this.title = title;
+        this.actions = actions;
+    }
+
+    public async *evokeAction(action: ChatAction){
+        //Does nothing since this is a base chat and there are no actions currently
+        yield {};
+    }
+
+    public removeMessageHistoryAfterIndex(messageIndex: number){
+        this.phases[this.currentPhaseIndex].removeMessageHistoryFromIndex(messageIndex);
+    }
+
+    public calcPhaseMessageIndexAdjustment(){
+        let messageIndexAdjustment = 0;
+        //Do not count the last (current) phase
+        for (let phaseIndex = 0; phaseIndex < this.phases.length-1; phaseIndex++){
+            let phase = this.phases[phaseIndex];
+            messageIndexAdjustment += phase.messageHistory.length;
+        }
+        return messageIndexAdjustment;
+    }
+
+    public async *submitChatMessage(content:string, model:string) {
+
+</passage><passage file_path=src/chat/agents/codebaseTwoStepPlanningAgent.ts>
+export class CodebaseTwoStepPlanningAgent extends DefaultAskCodebaseAgent {
+
+    constructor(
+        {
+            type = ChatAgentType.codebaseTwoStepPlanning,
+            systemMessage = "You are a codebase implementation planner for a new feature. You will be provided existing files and code snippets, and provide an initial implementation plan. The plan should be organized into file-by-file implementation steps. The steps should be ordered based on data flow. Ignore files that do not require changing, and do not show any code. After providing the initial implementation plan, you will switch into plan revision mode. In this mode, I will provide you instructions, and you will create a revised plan incorporating my instructions.",
+            firstMessagePromptPre = "Create a file-by-file implementation plan for this feature request: ",
+            firstMessagePromptPost = ". Ignore files that don't require changing. Do not show code.",
+            followUpMessagePromptPre = "Return a revised implementation plan based on these instructions: ",
+            followUpMessagePromptPost = "",
+            shouldRetrieveInFollowUps = true,
+
+</passage><passage file_path=src/chat/chats/diffCodebaseImplementationChat.ts>
+            for await (let { message, messageIndex } of codebaseDiffImplementationPhase.submitChatMessage(content, model, doNotEchoOrStore)){
+                if (message.role == 'assistant'){
+                    if (message.content){
+                        aiResponse = message.content;
+                    }
+                    let function_call_response = partialParseJson(aiResponse);
+
+                    let current_file = function_call_response.current_file;
+                    let diffsList = function_call_response.replaces_to_make;
+                    if (current_file && codebaseDiffImplementationAgent.selectedCodebaseContent && !editor && doesMessageContainFilePath(current_file)){
+
+</passage><passage file_path=src/webviewProvider/reactWebviewViewProvider.ts>
+  > = async ({ id, data }) => {
+    legacyWebviewViewProvider
+      .getMixPanel()
+      ?.track("Opened Stripe Upgrade Page", {
+        distinct_id: legacyWebviewViewProvider.getMachineId(),
+      });
+    let plan = data.plan;
+    let user = data.user;
+
+    if (plan == "gpt-4-credits") {
+      const url =
+        "https://buy.stripe.com/4gw01W5JE5FJ6li5kt?prefilled_email=" +
+        user.userEmail +
+        "&client_reference_id=" +
+        user.id;
+      vscode.env.openExternal(vscode.Uri.parse(url));
+    } else if (plan == "gpt-3.5-pro") {
+      const url =
+        "https://buy.stripe.com/3cscOI0pkb03gZW14e?prefilled_email=" +
+        user.userEmail +
+        "&client_reference_id=" +
+        user.id;
+      vscode.env.openExternal(vscode.Uri.parse(url));
+    } else if (plan == "codebase-pro") {
+      const url =
+        "https://buy.stripe.com/fZe4ic5JEecfaBybIQ?prefilled_email=" +
+        user.userEmail +
+        "&client_reference_id=" +
+        user.id;
+      vscode.env.openExternal(vscode.Uri.parse(url));
+    }
+  };
+
+</passage><passage file_path=src/webview/components/EditorContextMenuListener.tsx>
+  }, []);
+
+  return null; // This component does not render anything
+};
+
+export { EditorContextMenuListener };
+
+</passage><passage file_path=src/chat/agents/codebasePerFileImplementationAgent.ts>
+export class CodebasePerFileImplementationAgent extends DefaultAskCodebaseAgent {
+
+    constructor(
+        {
+            type = ChatAgentType.codebaseImplementation,
+            systemMessage = "You are a brilliant and meticulous engineer assigned to write code to complete the user's request. You will be provided existing files and source code snippets and you will implement across multiple files in the codebase. When you write code, the code works on the first try, and is complete. Take into account the current repository's language, code style, and dependencies. Your job is to make edits to the file to complete the user request.",
+            firstMessagePromptPre = "",
+            firstMessagePromptPost = "\n\nShow code changes for 1 file in each message. At the end of each message, either state the next file you will work on, or state that the implementation is complete. Ignore files that do not require changing.",
+            followUpMessagePromptPre = "",
+            followUpMessagePromptPost = "",
+            shouldRetrieveInFollowUps = false,
+            llmChatHistory = [],
+            selectedCodebaseContent = null,
+
+</passage><passage file_path=src/webviewProvider/reactWebviewViewProvider.ts>
+import { renderWebview } from "./Webview";
+import { LegacyWebviewViewProvider } from "./legacyWebviewViewProvider";
+import { Globals } from "../config/globals";
+import {
+  calcMaxAvailableTokens,
+  countMessageHistoryTokens,
+  encodeString,
+} from "../helpers/tokenCounters";
+import { createPrompt } from "../helpers/prompt";
+import {
+  checkCodebaseIndex,
+  deleteDirectory,
+  findFiles,
+  populateNodesAndGetAllDirectoryFiles,
+  indexCodebase,
+  indexLocalDirectory,
+  openPrimaryGitIgnoreFile,
+  selectNode,
+  unSelectNode,
+} from "../modules/indexCodebase";
+import { createOrUpdateDiffView } from "../modules/diffViewProvider";
+import { truncateFromTop } from "../helpers/chatHistory";
+import { OpenAIClient, createOpenAIClient } from "../apis/openaiClient";
+import path from "node:path";
+import { createDataCollectionLogObject } from "../helpers/dataCollection";
+import { first } from "lodash";
+import highLevelCodeDesignAgent, {
+  CodebaseTwoStepPlanningAgent,
+} from "../chat/agents/codebaseTwoStepPlanningAgent";
+import DefaultAskCodebaseAgent from "../chat/agents/defaultAskCodebaseAgent";
+
+</passage><passage file_path=src/chat/agents/codebaseTwoStepPerFileImplementationAgent.ts>
+import { SelectedCodebaseContent } from "../../apis/extensionToServerApi";
+import { Globals } from "../../config/globals";
+import { extractFileContentsFromMessageContainingFilePaths, extractPromptFilesAndMethods } from "../../helpers/utils";
+import { appendFileSkeletonContent } from "../../modules/fileSkeleton";
+import { Agent, ChatAgentType } from "../../types/agents";
+import { AgentLLMChatMessage, EasyCodeChatMessage } from "../../types/chatMessage"
+import BaseAgent from "./baseAgent";
+import * as lodash from 'lodash';
+
+export class CodebaseTwoStepPerFileImplementationAgent extends BaseAgent {
+
+</passage><passage file_path=src/webviewProvider/reactWebviewViewProvider.ts>
+import DiffCodebaseImplementationChat from "../chat/chats/diffCodebaseImplementationChat";
+import CodebaseImplementationChat from "../chat/chats/codebaseImplementationChat";
+import DiffPhase from "../chat/phases/diffPhase";
+import CodebaseCallGraphChat from "../chat/chats/codebaseCallGraphChat";
+
+// Define your custom format
+const customFormat = winston.format.combine(
+  winston.format.timestamp(),
+  winston.format.metadata({
+    fillExcept: ["message", "level", "timestamp", "label"],
+  }),
+  winston.format.printf(({ timestamp, level, message, metadata }) => {
+    let metaString = "";
+    for (const key in metadata) {
+      if (metadata.hasOwnProperty(key)) {
+        metaString += `${key}: ${metadata[key]}, `;
+      }
+    }
+    return `${timestamp} [${level}]: ${message} ${metaString}`;
+  })
+);
+
+const logzioWinstonTransport = new LogzioWinstonTransport({
+  level: "info",
+  name: "winston_logzio",
+  token: "EpjhkggQQKQAucPPQOJkLaQdqEwEtaPE",
+  host: "listener.logz.io",
+});
+
+const logger = winston.createLogger({
+
+</passage><passage file_path=src/sentry/node-extension-telemetry.ts>
+export const createSentryRewriteFramesIntegration = (context: ExtensionContext) => new RewriteFrames({
+    iteratee(frame) {
+        const { filename, in_app, colno, lineno } = frame;
+        const inCurrentExt = filename ? vscode.Uri.file(filename).path.startsWith(context.extensionUri.path) : in_app;
+        const extColno = (colno !== undefined && lineno === 1) ? (colno - NODE_WRAPPER_PREFIX_LENGTH) : colno;
+
+        return {
+            ...frame,
+            in_app: inCurrentExt,
+            colno: inCurrentExt ? extColno : colno,
+        };
+    }
+});
+
+export const initializeExtensionSentry = () => {
+
+</passage><passage file_path=src/chat/phases/codebaseImplementationPhase.ts>
+
+import CodebasePerFileImplementationAgent from "../agents/codebasePerFileImplementationAgent";
+import BasePhase from "./basePhase";
+
+export class CodebaseImplementationPhase extends BasePhase {
+    constructor(
+        {
+			agents = [new CodebasePerFileImplementationAgent()],
+		}: Partial<BasePhase> = {}
+    ) {
+        super({agents: agents});
+    }
+}
+
+export default CodebaseImplementationPhase;
+
+</passage><passage file_path=src/webview/routes/index.ts>
+export { default as routes } from './routes';
+
+</passage><passage file_path=src/chat/phases/basePhase.ts>
+			}
+		});
+		this.agentIndex = agentIndex;
+		this.agentIterationsLeft = agentIterationsLeft;
+	}
+
+	public removeMessageHistoryFromIndex(messageIndex: number){
+		this.messageHistory = removeMessageHistoryFromIndex(this.messageHistory, messageIndex);
+	}
+
+    public async *submitChatMessage(content:string, model:string, doNotEchoOrStore?:boolean) {
+
+</passage><passage file_path=src/chat/phases/twoStepCodebaseImplementationPhase.ts>
+    ) {
+        super({type, messageHistory, agents, agentIndex, agentIterationsLeft});
+        this.implementationPlan = implementationPlan;
+        this.pastMessagesWithoutFileContent = pastMessagesWithoutFileContent;
+        this.filePaths = filePaths;
+        this.fileContents = fileContents;
+        this.selectedCodebaseContent = selectedCodebaseContent;
+    }
+
+</passage><passage file_path=src/chat/agents/codebaseDiffPerFileImplementationAgent.ts>
+            followUpMessagePromptPost = "",
+            shouldRetrieveInFollowUps = false,
+            llmChatHistory = [],
+            selectedCodebaseContent = null,
+            functions = [search_and_replace_schema_next_file]
+        }: Partial<DefaultAskCodebaseAgent> = {}
+
+</passage><passage file_path=src/chat/phases/basePhase.ts>
+			} catch (error: any) {
+				if (error == 'STOPSIGNAL'){
+					if (easyCodeChatMessage && easyCodeChatMessage['easyCodeMetadata']){
+						easyCodeChatMessage['easyCodeMetadata'].finishedStreaming = true;
+						yield { message: easyCodeChatMessage, messageIndex: this.messageHistory.length};
+					}
+					this.messageHistory.push(easyCodeChatMessage);
+					if (this.agentIterationsLeft > 1){
+						if (doNotEchoOrStore)
+							doNotEchoOrStore = false;
+						this.agentIndex++;
+						this.agentIndex = this.agentIndex % this.agents.length;
+						currentLoop++;
+						this.agentIterationsLeft--;
+						continue;
+					}
+				}
+				throw error;
+			}
+
+</passage><passage file_path=src/webview/pages/components/Layout.tsx>
+import { Outlet, ScrollRestoration } from 'react-router-dom';
+import { AppNav } from '../../components';
+import { useRef, useState } from 'react';
+import { ChatHistoryMenuItemProvider } from '../../components/ChatHistoryMenuItemContext';
+import React from 'react';
+
+export default function Layout() {
+
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const historyMenuButtonRef = useRef<HTMLDivElement>(null);
+
+  return (
+    <>
+      <ChatHistoryMenuItemProvider value={{ isHistoryMenuOpen: isMenuOpen, setHistoryMenuOpen: setMenuOpen, historyMenuButtonRef: historyMenuButtonRef}}>
+      <AppNav />
+      <main className="flex-grow">
+        <Outlet />
+      </main>
+      </ChatHistoryMenuItemProvider>
+      <ScrollRestoration />
+    </>
+  );
+}
+
+</passage><passage file_path=src/webview/components/AppNav.tsx>
+  const { getUserProfile } =
+    useAppRouteLoaderData<"getUserProfile">(layout.id) ?? {};
+  const [userProfile, setUserProfile] = useState(
+    getUserProfile?.data?.user as EasyCodeUser
+  );
+  const [isUpgradeModalOpen, setIsUpgradeModalOpen] = useState(false);
+  const [isAccountModalOpen, setIsAccountModalOpen] = useState(false);
+
+  const handleNewTab = async () => {
+    dispatch(webviewToExtensionApi.endpoints.addTab.initiate());
+  };
+
+  useEffect(() => {
+    const sentryUser = createSentryUser({ email: userProfile.userEmail });
+    SentryReact.setUser(sentryUser);
+  }, [userProfile]);
+
+  const handleOpenAccountModal = async () => {
+    const updatedUserProfile = await dispatch(
+      webviewToExtensionApi.endpoints.getUserProfile.initiate(undefined, {
+        forceRefetch: true,
+      })
+    );
+    setUserProfile(updatedUserProfile?.data?.user as EasyCodeUser);
+    console.log(updatedUserProfile?.data?.user as EasyCodeUser);
+    setIsAccountModalOpen(true);
+  };
+
+  return (
+    <>
+
+</passage><passage file_path=src/webview/pages/data/signup.ts>
+const action: ActionFunction = async ({ request }) => {
+  const { email, password, passwordConfirm, role } = Object.fromEntries<FormDataEntryValue>(await request.formData());
+
+  if (!!(email && typeof email !== 'string') || !!(password && typeof password !== 'string') || !!(passwordConfirm && typeof passwordConfirm !== 'string') || !!(role && typeof role !== 'string')) {
+    // should not happen
+    throw new Error('Unexpected type');
+  }
+
+  if (password !== passwordConfirm) {
+    console.log(password);
+    console.log(passwordConfirm);
+    console.log(role);
+    return json<JsonType<'signup'>>({ signup: { error: {message: 'Passwords do not match!'}} });
+  }
+
+  const result = await store.dispatch(webviewToExtensionApi.endpoints.signup.initiate({ email, password, role }));
+  if ('error' in result) {
+    return json<JsonType<'signup'>>({ signup: result });
+  } else {
+    return redirect('/chat');
+  }
+};
+
+export default {
+  Component: Signup,
+  action,
+};
+
+</passage><passage file_path=src/chat/agents/codebaseTwoStepPerFileImplementationAgent.ts>
+    constructor(
+        {
+        type = ChatAgentType.codebaseTwoStepImplementation,
+        systemMessage = "You are a flexible developer who will code a feature across multiple files. You will be provided an initial implementation plan with steps and files. I will provide you file contents, and you will give me code changes for the provided file(s). New code inside your code blocks should contain existing lines above and below so I can identify the exact spot in the file. If I provide you file contents or instructions that differ from the original plan, you will add these into the implementation plan and your previous implementation code. If I ask you questions, you will answer them. At the end of your code implementation message, you will state which file(s) you will work on next, or state that you have completed coding the entire implementation plan (not just the files I gave you).",
+        firstMessagePromptPre = "",
+        firstMessagePromptPost = "",
+        followUpMessagePromptPre = "",
+        followUpMessagePromptPost = "\n\nAt the end of your response, either list file paths for the files you will work on next, or state that you have finished coding the entire implementation.",
+
+</passage><passage file_path=src/webview/redux/webviewToExtensionApi.ts>
+  }),
+});
+
+export type ExtensionApiEndpoint = keyof typeof webviewToExtensionApi.endpoints;
+
+export const {
+  useGetModelQuery,
+  useGetMessagesOrChatQuery,
+  useGetMessageHistoryListQuery,
+  useGetAllDirectoriesFileTreeQuery,
+  useFileSkeletonDataQuery,
+} = webviewToExtensionApi;
+
+</passage><passage file_path=src/webview/pages/index.ts>
+export { default as login } from './data/login';
+export { default as tryWithoutAccount } from './data/tryWithoutAccount';
+export { default as layout } from './data/layout';
+export { default as chatLayout } from './data/chatLayout';
+export { default as signup } from './data/signup';
+export { default as forgotPassword } from './data/forgotPassword';
+export { default as chatTab } from './data/chatTab';
+
+</passage><passage file_path=src/webview/pages/data/login.ts>
+import { json, redirect } from 'react-router-dom';
+import { webviewToExtensionApi } from '../../redux/webviewToExtensionApi';
+import { store } from '../../redux/store';
+import Login from '../components/Login';
+import type { JsonType } from '../../routes/types';
+import type { ActionFunction } from '@remix-run/router';
+
+const action: ActionFunction = async ({ request }) => {
+  const { email, password } = Object.fromEntries<FormDataEntryValue>(await request.formData());
+
+  if (!!(email && typeof email !== 'string') || !!(password && typeof password !== 'string')) {
+    // should not happen
+    throw new Error('Unexpected type');
+  }
+
+  const result = await store.dispatch(webviewToExtensionApi.endpoints.login.initiate({ email, password }));
+  if ('error' in result) {
+    return json<JsonType<'login'>>({ login: result });
+  } else {
+    return redirect('/chat');
+  }
+};
+
+export default {
+  Component: Login,
+  action,
+};
+
+</passage><passage file_path=src/webview/components/index.ts>
+export { default as AppNav } from './AppNav';
+export { default as CommandLink } from './CommandLink';
+export { default as ExternalLink } from './ExternalLink';
+
+</passage><passage file_path=src/webview/pages/components/AskCodebasePanel.tsx>
+        <div className="flex flex-row">
+          <FileTree node={directoryData.fileTree[0]}
+                    isRoot={true}
+                    onCheckboxChange={(node, selected) => handleCheckboxChange(node, directoryData.selectedFolderPath, directoryData.isProjectRoot, selected)}/>
+          {!directoryData.isProjectRoot &&
+            <IoTrashOutline className='w-6 h-6 mt-1 cursor-pointer hover:text-red-500' onClick={(event:any) => handleDeleteDirectory(event, directoryData.selectedFolderPath)} />
+          }
+        </div>
+        )}
+        <div style={{marginLeft: '0.125rem'}} className="flex flex-row cursor-pointer hover:text-blue-500" onClick={handleAddDirectory}>
+          <IoAddCircleOutline className='ml-5 w-6 h-6 mr-1.5 mb-2' /><span className="">Add Directory</span>
+        </div>
+        <div style={{marginLeft: '0.125rem'}} className="flex flex-row cursor-pointer hover:text-blue-500" onClick={handleExcludeDirectories}>
+          <IoRemoveCircleOutline className='ml-5 w-6 h-6 mr-1.5 mb-2' />
+          <span className="">Exclude Directories</span>
+
+</passage><passage file_path=src/chat/phases/basePhase.ts>
+		while(currentLoop < maxLoops && this.agentIterationsLeft > 0){
+			try {
+				let curAgent = this.agents[this.agentIndex];
+				if (doNotEchoOrStore){
+					await curAgent.createChatMessages(this.messageHistory.concat([userMessage]), model);
+				} else {
+					await curAgent.createChatMessages(this.messageHistory, model);
+				}
+				for await (const streamingEasyCodeChatMessage of curAgent.submitChatMessage(model)) {
+					easyCodeChatMessage = streamingEasyCodeChatMessage;
+					yield { message: easyCodeChatMessage, messageIndex: this.messageHistory.length};
+				}
+			} catch (error: any) {
+
+</passage><passage file_path=src/webview/pages/components/AskCodebasePanel.tsx>
+    const handleCheckboxChange = async (node: FileTreeNode, selectedFolderPath: string, isProjectRoot: boolean, selected: boolean) => {
+
+      console.log("handleCheckboxChange");
+      if (data){
+        store.dispatch(webviewToExtensionApi.endpoints.selectOrUnselectNode.initiate({fileNode: node, selected: selected, selectedFolderPath: selectedFolderPath, isProjectRoot: isProjectRoot}));
+      }
+      setAllDirectoryData(prevDirectoryDatas => {
+        if (!prevDirectoryDatas) return prevDirectoryDatas;
+        return prevDirectoryDatas.map((prevDirectoryData) => {
+          if (prevDirectoryData.selectedFolderPath == selectedFolderPath){
+            prevDirectoryData.fileTree[0] = updateSelectedNodeAndChildren(prevDirectoryData.fileTree[0], node.path, selected);
+          }
+          return prevDirectoryData;
+        });
+      });
+    };
+    //let fileTree = data?.fileTree[0];
+    return (
+      <div className="">
+        {allDirectoryData?.map(directoryData =>
+        <div className="flex flex-row">
+
+</passage><passage file_path=src/chat/agents/codebaseExplainAgent.ts>
+export class CodebaseExplainAgent extends DefaultAskCodebaseAgent {
+
+    constructor(
+        {
+        type = ChatAgentType.codebaseExplain,
+        systemMessage = "You are an expert developer who will explain how a codebase works by looking at files and code snippets. You will reference files when explaining.",
+        firstMessagePromptPre = "Based on the code and files above, ",
+        firstMessagePromptPost = ". Reference files and code.",
+        followUpMessagePromptPre = "\n\nHere are some more files and code. ",
+        followUpMessagePromptPost = "",
+        shouldRetrieveInFollowUps = true,
+        llmChatHistory = []
+        } : Partial<BaseAgent> = {}
+    ) {
+        super({type, systemMessage, firstMessagePromptPre, firstMessagePromptPost, followUpMessagePromptPre, followUpMessagePromptPost, shouldRetrieveInFollowUps, llmChatHistory})
+
+    }
+}
+
+export default CodebaseExplainAgent;
+
+</passage><passage file_path=walkthroughs/askGPT.md>
+## ChatGPT in the IDE
+
+<img src="https://storage.googleapis.com/easycode-assets/askGPT.gif" alt="ChatGPT in the IDE">
+
+Answer general programming questions. 
+</passage><passage file_path=src/webview/pages/components/ChatTab.tsx>
+                    {
+                      label: ChatCommand.Implement,
+                      kind: monaco.languages.CompletionItemKind.Constructor,
+                      insertText: ChatCommand.Implement + ' ',
+                      documentation: "Implements a feature across your codebase, one file at a time.\n\nEx: 'Add Google SSO'",
+                      range: {
+                        startLineNumber: position.lineNumber,
+                        startColumn: position.column,
+                        endLineNumber: position.lineNumber,
+                        endColumn: position.column
+                      }
+                    },
+                    {
+
+</passage><passage file_path=src/config/globals.ts>
+export class Globals {
+
+    static _easyCodeClient: EasyCodeClient;
+    static _openAIClient: OpenAIClient;
+
+    static _settings: ExtensionSettings = {
+        selectedInsideCodeblock: false,
+        copyOnClick: true,
+        maxTokens: 500,
+        temperature: 0,
+        model: 'gpt-3.5-turbo',
+        userEmail: '',
+        openAIApiKey: '',
+        inlineCompletion: true,
+        dataCollection: true,
+        usePromptAssistant: true,
+        useOwnApiKey: false,
+        useActiveViewContext: false
+    };
+
+    static getSettings() {
+        return this._settings;
+    }
+
+    static setSettings(newSettings: ExtensionSettings) {
+        this._settings = {...this._settings, ...newSettings};
+    }
+
+    static getEasyCodeClient() {
+        return this._easyCodeClient;
+    }
+
+    static setEasyCodeClient(newEasyCodeClient: EasyCodeClient) {
+        this._easyCodeClient = newEasyCodeClient;
+    }
+
+    static getOpenAIClient() {
+        return this._openAIClient;
+    }
+
+    static setOpenAIClient(newOpenAIClient: OpenAIClient) {
+
+</passage><passage file_path=src/chat/agents/function_schemas/function_schemas.ts>
+            replaces_to_make: {
+                type: "array",
+                description: "Array of sections to modify",
+                items: {
+                    type: "object",
+                    properties: {
+                        section_id: {
+                            type: "string",
+                            description: "The section ID the original code belongs to.",
+                        },
+                        old_code: {
+                            type: "string",
+                            description: "The old lines of code that belongs to section with ID section_id. Be sure to add lines before and after to disambiguate the change.",
+                        },
+                        new_code: {
+                            type: "string",
+                            description: "The new code to replace the old code.",
+                        },
+                    },
+                    required: ["section_id", "old_code", "new_code"],
+                },
+            },
+            next_file: {
+
+</passage><passage file_path=src/webview/redux/webviewToExtensionApi.ts>
+      },
+    }),
+    getAllDirectoriesFileTree: builder.query<
+      { allDirectoriesFileTree: DirectoryData[] },
+      void
+    >({
+      query() {
+        return {
+          type: "get-all-directories-file-tree",
+        };
+      },
+      providesTags: ["FileTree"],
+    }),
+    deleteDirectory: builder.mutation<void, { selectedFolderPath: string }>({
+      query(data) {
+        return {
+          type: "delete-directory",
+          data,
+        };
+      },
+      invalidatesTags: ["FileTree"],
+    }),
+    selectOrUnselectNode: builder.mutation<
+      void,
+      {
+        fileNode: FileTreeNode;
+        selected: boolean;
+        selectedFolderPath: string;
+        isProjectRoot: boolean;
+      }
+    >({
+      query(data) {
+        return {
+          type: "select-or-unselect-node",
+          data,
+        };
+      },
+      invalidatesTags: ["FileTree"],
+    }),
+    sendMessage: builder.mutation<
+
+</passage><passage file_path=src/webview/components/AppNav.tsx>
+    <>
+      <NavbarContent justify="start" className="flex-wrap gap-y-0">
+        {/*
+        <NavBarNavLink to="/auth/try">
+          Try Without Account
+        </NavBarNavLink>
+        */}
+        <NavBarNavLink to="/auth/signup">Sign Up</NavBarNavLink>
+        <NavBarNavLink to="/auth/login">Login</NavBarNavLink>
+        <NavBarNavLink to="/auth/forgot-password">
+          Forgot Password
+        </NavBarNavLink>
+      </NavbarContent>
+    </>
+  );
+}
+
+function handleLogoutAndSignUp(navigate: NavigateFunction) {
+  store.dispatch(webviewToExtensionApi.endpoints.logout.initiate());
+  navigate("/auth/signup");
+}
+
+function handleLogout(navigate: NavigateFunction) {
+  store.dispatch(webviewToExtensionApi.endpoints.logout.initiate());
+  navigate("/auth/login");
+}
+
+function AuthenticatedNavbar(isMenuOpen: any) {
+  const errorState = useAppSelector((state) => state.errorState);
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+  const { getUserProfile } =
+
+</passage><passage file_path=src/chat/agents/codebaseTwoStepPerFileImplementationAgent.ts>
+export class CodebaseTwoStepPerFileImplementationAgent extends BaseAgent {
+
+    private step: number = 0;
+    public implementationPlan: string = '';
+    public selectedCodebaseContent: SelectedCodebaseContent;
+
+
+    constructor(
+
+</passage><passage file_path=src/chat/chats/codebaseImplementationChat.ts>
+import { ChatAction, ChatType } from "../../types/chat";
+import BaseChat from "./baseChat";
+import CodebaseImplementationPhase from "../phases/codebaseImplementationPhase";
+
+export class CodebaseImplementationChat extends BaseChat {
+
+</passage><passage file_path=src/chat/agents/codebaseDiffPerFileImplementationAgent.ts>
+export class CodebaseDiffPerFileImplementationAgent extends DefaultAskCodebaseAgent {
+
+    constructor(
+        {
+            type = ChatAgentType.codebaseDiffImplementation,
+            systemMessage = "You are a brilliant and meticulous engineer assigned to write code to complete the user's request. You will be provided existing files and source code snippets and you will implement across multiple files in the codebase. When you write code, the code works on the first try, and is complete. Take into account the current repository's language, code style, and dependencies. Your job is to make edits to the file to complete the user request. Your changes should not accidentally break or remove existing lines from old_code. You can reprint existing lines at the bottom or top of the new_code.",
+            firstMessagePromptPre = "",
+            firstMessagePromptPost = "\n\nMakes changes to 1 file in each message, and determine the next_file to work on. If all changes are complete, set next_file to ''. Ignore files that do not require changing.",
+            followUpMessagePromptPre = "",
+            followUpMessagePromptPost = "",
+
+</passage><passage file_path=vsc-extension-quickstart.md>
+* Reduce the extension size and improve the startup time by [bundling your extension](https://code.visualstudio.com/api/working-with-extensions/bundling-extension).
+* [Publish your extension](https://code.visualstudio.com/api/working-with-extensions/publishing-extension) on the VS Code extension marketplace.
+* Automate builds by setting up [Continuous Integration](https://code.visualstudio.com/api/working-with-extensions/continuous-integration).
+
+</passage><passage file_path=src/webview/pages/components/AskCodebasePanel.tsx>
+    const handleDeleteDirectory = (event:any, selectedFolderPath: string) => {
+      store.dispatch(webviewToExtensionApi.endpoints.deleteDirectory.initiate({selectedFolderPath}));
+    }
+    const handleAddDirectory = (event: any) => {
+      store.dispatch(webviewToExtensionApi.endpoints.indexLocalDirectory.initiate());
+    }
+
+    const handleExcludeDirectories = (event: any) => {
+      store.dispatch(webviewToExtensionApi.endpoints.openPrimaryGitIgnoreFile.initiate());
+    }
+
+    const handleCheckboxChange = async (node: FileTreeNode, selectedFolderPath: string, isProjectRoot: boolean, selected: boolean) => {
+
+</passage><passage file_path=src/chat/phases/diffPhase.ts>
+	public override async *submitChatMessage(content:string, model:string, doNotEchoOrStore?: boolean){
+
+
+        let selectionList: any[] = [];
+        let newCodeList: any[] = [];
+
+
+        let editor: vscode.TextEditor | undefined;
+
+        let diffsList: any;
+
+        // Wrapped createOrUpdateDiffView with debounce, with immediate execution on the first call
+        const debouncedCreateOrUpdateDiffView = debounce(createOrUpdateDiffView, 250, true);
+
+		let aiResponse = "";
+        try {
+
+</passage><passage file_path=src/modules/diffViewProvider.ts>
+export function createOrUpdateDiffView(document: vscode.TextDocument, selectionList: vscode.Selection[], newCodeList: string[]) {
+    let uri = document.uri;
+    let originalContent = document.getText();
+    let virtualDocUri = vscode.Uri.parse('easycode-temp:' + path.basename(uri.fsPath));
+
+    // Check if the content provider is already registered
+    let virtualFileContentProvider = contentProviderMap.get(virtualDocUri.toString());
+
+    if (!virtualFileContentProvider) {
+        // Create a new content provider and register it
+        virtualFileContentProvider = new VirtualFileContentProvider(virtualDocUri, originalContent);
+        contentProviderMap.set(virtualDocUri.toString(), virtualFileContentProvider);
+        vscode.workspace.registerTextDocumentContentProvider('easycode-temp', virtualFileContentProvider);
+    }
+
+    // Apply the new changes to the original content
+    let newContent = originalContent;
+    // Sort the selections in reverse order by their start position
+    let sortedSelections = selectionList
+
+</passage><passage file_path=src/webview/hooks/redux.ts>
+import { useDispatch, useSelector } from 'react-redux';
+import { useActionData, useLoaderData, useRouteLoaderData } from 'react-router-dom';
+import type { ExtensionApiEndpoint } from '../redux/webviewToExtensionApi';
+import type { AppDispatch, RootState } from '../redux/store';
+import type { JsonType } from '../routes/types';
+import type { TypedUseSelectorHook } from 'react-redux';
+
+export const useAppDispatch: () => AppDispatch = useDispatch;
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
+
+export const useAppActionData = useActionData as <T extends ExtensionApiEndpoint>() =>
+  | JsonType<T>
+  | null
+  | undefined;
+
+export const useAppLoaderData = useLoaderData as <T extends ExtensionApiEndpoint>() =>
+  | JsonType<T>
+  | null
+  | undefined;
+
+export const useAppRouteLoaderData = useRouteLoaderData as <T extends ExtensionApiEndpoint>(routeId: string) =>
+  | JsonType<T>
+  | null
+  | undefined;
+
+</passage><passage file_path=src/sentry/node-extension-telemetry.ts>
+        integrations: [
+            // default integrations
+            new SentryNode.Integrations.InboundFilters(),
+            new SentryNode.Integrations.FunctionToString(),
+            new SentryNode.Integrations.Http(),
+            new SentryNode.Integrations.Undici(),
+            new SentryNode.Integrations.ContextLines(),
+            new SentryNode.Integrations.Context(),
+            new SentryNode.Integrations.LinkedErrors(),
+
+            // other integrations
+            new ExtraErrorData(),
+        ],
+    });
+
+</passage><passage file_path=src/types/types.ts>
+import * as vscode from 'vscode';
+
+export interface FileTreeNode {
+	name: string;
+	path: string;
+	children: FileTreeNode[];
+	selected: boolean;
+	isFile?: boolean;
+}
+
+export interface DirectoryData {
+  fileTree: FileTreeNode[];
+  isProjectRoot:boolean;
+  selectedFolderPath:string;
+  rootLabel:string|undefined;
+}
+
+
+export interface ReferenceMapping {
+	ReferenceMethodFileMapping: Map<vscode.Uri, vscode.DocumentSymbol>;
+	methodName: string;
+	methodText: string;
+}
+
+export interface CodeEvalHandle {
+	run: ({ signal }?: { signal?: AbortSignal }) => void,
+}
+
+export interface ExtendedWebviewViewProvider extends vscode.WebviewViewProvider {
+	postMessage: (message: any) => void;
+  clearCache: () => void;
+  createLocalOpenAIClient: (apiKey: string | undefined) => void;
+}
+
+export type AuthInfo = {apiKey?: string}
+export type ExtensionSettings = {selectedInsideCodeblock?: boolean, copyOnClick?: boolean, model?: string, maxTokens?: number, temperature?: number, userEmail?: string, openAIApiKey?: string, inlineCompletion?: boolean, dataCollection?: boolean, useOwnApiKey?:boolean, usePromptAssistant?:boolean, useActiveViewContext?:boolean}
+
+</passage><passage file_path=src/chat/phases/codebaseDiffImplementationPhase.ts>
+import BasePhase from "./basePhase";
+import CodebaseDiffPerFileImplementationAgent from "../agents/codebaseDiffPerFileImplementationAgent";
+
+export class CodebaseDiffImplementationPhase extends BasePhase {
+    constructor(
+        {
+			agents = [new CodebaseDiffPerFileImplementationAgent()],
+		}: Partial<BasePhase> = {}
+    ) {
+        super({agents: agents});
+    }
+}
+
+export default CodebaseDiffImplementationPhase;
+
+</passage><passage file_path=src/webview/pages/data/layout.ts>
+import { QueryStatus } from '@reduxjs/toolkit/query';
+import { json, redirect } from 'react-router-dom';
+import { webviewToExtensionApi } from '../../redux/webviewToExtensionApi';
+import { store } from '../../redux/store';
+import Layout from '../components/Layout';
+import type { JsonType } from '../../routes/types';
+import type { LoaderFunction , ShouldRevalidateFunction } from 'react-router-dom';
+
+const loader: LoaderFunction = async ({ request }) => {
+
+</passage><passage file_path=package-lock.json>
+    "node_modules/micromark-extension-gfm-task-list-item": {
+      "version": "1.0.5",
+      "resolved": "https://registry.npmjs.org/micromark-extension-gfm-task-list-item/-/micromark-extension-gfm-task-list-item-1.0.5.tgz",
+      "integrity": "sha512-RMFXl2uQ0pNQy6Lun2YBYT9g9INXtWJULgbt01D/x8/6yJ2qpKyzdZD3pi6UIkzF++Da49xAelVKUeUMqd5eIQ==",
+      "dependencies": {
+        "micromark-factory-space": "^1.0.0",
+        "micromark-util-character": "^1.0.0",
+        "micromark-util-symbol": "^1.0.0",
+        "micromark-util-types": "^1.0.0",
+        "uvu": "^0.5.0"
+      },
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/unified"
+      }
+    },
+    "node_modules/micromark-factory-destination": {
+
+</passage><passage file_path=src/chat/agents/codebaseCallGraphAgent.ts>
+export class CodebaseCallGraphAgent extends DefaultAskCodebaseAgent {
+
+    constructor(
+        {
+        type = ChatAgentType.codebaseCallGraph,
+        systemMessage = "You are a call graph generator that will look at files and code snippets and return the call graph of the user's request. Your call graph should include both direct and indirect calls. You will return a list of functions.",
+        firstMessagePromptPre = "Based on the code and files above, ",
+        firstMessagePromptPost = ". Return a list of functions.",
+        followUpMessagePromptPre = "",
+        followUpMessagePromptPost = "",
+        shouldRetrieveInFollowUps = true,
+        llmChatHistory = [],
+        functions = [create_call_graph_schema],
+        } : Partial<CodebaseCallGraphAgent> = {}
+    ) {
+        super({type, systemMessage, firstMessagePromptPre, firstMessagePromptPost, followUpMessagePromptPre, followUpMessagePromptPost, shouldRetrieveInFollowUps, llmChatHistory, functions})
+
+    }
+}
+
+export default CodebaseCallGraphAgent;
+
+</passage><passage file_path=src/apis/openaiClient.ts>
+                        /*
+                        ((parsedArguments === undefined || !isMessageComplete) ? (
+                            Promise.resolve()
+                        ) : (
+                            this.configCodeEvalHandle(parsedArguments, codeEvalLang).then<void>(async (output) => {
+                                if (output !== null) {
+                                    this._messageHistory[this._tabIndex].push({
+                                        role: 'function',
+                                        name: functionCall.name,
+                                        content: output,
+                                    });
+                                    await context.workspaceState.update('chatHistory', this._messageHistory);
+                                }
+                            })
+                        )).then(() => {
+                            if (this._sortedMap && this._sortedMap.length > 0){
+                                this._view?.webview.postMessage({ type: 'addFollowUpBox', tabIndex: this._tabIndex, codebaseAnswer: true});
+                            } else {
+                                this._view?.webview.postMessage({ type: 'addFollowUpBox', tabIndex: this._tabIndex});
+                            }
+                        }).finally(() => {
+                            console.log(this._messageHistory[this._tabIndex]);
+                        });*/
+
+</passage><passage file_path=src/apis/openaiClient.ts>
+                        }
+
+                        /*
+                        context.workspaceState.update('chatHistory', this._messageHistory);
+
+                        const { model, modelType } = easyCodeMetadata;
+                        const combinedModelName = modelType ? `${model}-${modelType}` : model;
+                        logger.info("Data Collection", this.createDataCollectionLogObject(JSON.stringify(this._messageHistory[this._tabIndex]), combinedModelName));
+                        */
+
+                        /*
+
+</passage><passage file_path=src/webview/pages/data/tryWithoutAccount.ts>
+import { json, redirect } from 'react-router-dom';
+import { webviewToExtensionApi } from '../../redux/webviewToExtensionApi';
+import { store } from '../../redux/store';
+import TryWithoutAccount from '../components/TryWithoutAccount';
+import type { JsonType } from '../../routes/types';
+import type { ActionFunction } from '@remix-run/router';
+
+const action: ActionFunction = async () => {
+  const result = await store.dispatch(webviewToExtensionApi.endpoints.loginWithPlaceholder.initiate());
+  if ('error' in result) {
+    return json<JsonType<'loginWithPlaceholder'>>({ loginWithPlaceholder: result });
+  } else {
+    return redirect('/chat');
+  }
+};
+
+export default {
+  Component: TryWithoutAccount,
+  action,
+};
+
+</passage><passage file_path=src/webview/pages/components/Login.tsx>
+export default function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const data = useAppActionData<'login'>()?.login;
+  const navigation = useNavigation();
+
+  return (
+    <Form replace method="POST" className="flex flex-col gap-y-4 items-start px-6 w-64">
+      <Input
+        variant='bordered'
+        name="email"
+        type="email"
+        label="Email"
+        value={email}
+        onValueChange={(value: string) => { setEmail(value); }}
+      />
+      <Input
+        variant='bordered'
+        name="password"
+        type="password"
+        label="Password"
+        value={password}
+        onValueChange={(value: string) => { setPassword(value); }}
+      />
+
+      <Button
+        type="submit"
+        color="primary"
+        isLoading={navigation.state !== 'idle'}
+      >
+        Login
+      </Button>
+
+      {(data && 'error' in data) && (
+        <div className="text-danger">{data.error?.message}</div>
+      )}
+    </Form>
+  );
+}
+
+</passage><passage file_path=src/config/globals.ts>
+import { EasyCodeClient } from "../apis/extensionToServerApi";
+import { OpenAIClient } from "../apis/openaiClient";
+import { ExtensionSettings } from "../types/types";
+
+export class Globals {
+
+</passage><passage file_path=src/webview/pages/components/ChatTab.tsx>
+                    {
+                      label: ChatCommand.PlanAndImplement,
+                      kind: monaco.languages.CompletionItemKind.Constructor,
+                      insertText: ChatCommand.PlanAndImplement + ' ',
+                      documentation: "Creates an implementation plan for a feature, and then begins implementing the feature one file at a time.\n\nEx: 'Add Google SSO'",
+                      range: {
+                        startLineNumber: position.lineNumber,
+                        startColumn: position.column,
+                        endLineNumber: position.lineNumber,
+                        endColumn: position.column
+                      }
+                    },
+                    {
+
+</passage><passage file_path=src/webview/pages/components/UpgradeModal.tsx>
+            <>
+              <p>
+              To view upgrades, you must first create an account.
+              </p>
+              <Button radius='sm' color='primary' variant='shadow' onClick={() => handleLogout(navigate)}>
+              Sign Up
+              </Button>
+            </>
+          :
+            <>
+              <>
+                <p>
+                    Contact us at <b>support@easycode.ai</b> to get more GPT-4 credits.
+                </p>
+              </>
+              {/*
+
+</passage><passage file_path=src/modules/callGraph.ts>
+      methodNames.forEach((startElement, i) => {
+        // If the startElement does not exist in the path, the start_index below must be undefined, so there is no need to compare
+        if (!indexMap.hasOwnProperty(startElement)) return;
+        methodNames.forEach((endElement, j) => {
+
+</passage><passage file_path=src/apis/openaiClient.ts>
+                        /*
+                        if (isAskCodebase && isAskCodebase == true) {
+                            this.getMixPanel()?.track('Answered Ask Codebase', {
+                                distinct_id: this.getMachineId(),
+                                useOwnApiKey,
+                            });
+                        }
+
+                        let encodedResponse = enc.encode(response);
+                        if (model == 'gpt-4'){
+                            this.getMixPanel()?.people.increment(this.getMachineId(), 'User API Key GPT-4 Output Tokens Used', encodedResponse.length);
+                            this.getMixPanel()?.people.increment(this.getMachineId(), 'User API Key GPT-4 Output Cost ($0.06/1000 tokens)', (encodedResponse.length / 1000) * 0.06);
+                        } else {
+                            this.getMixPanel()?.people.increment(this.getMachineId(), 'User API Key GPT-3.5 Output Tokens Used', encodedResponse.length);
+                            this.getMixPanel()?.people.increment(this.getMachineId(), 'User API Key GPT-3.5 Output Cost ($0.002/1000 tokens)', (encodedResponse.length / 1000) * 0.002);
+                        }
+
+                        */
+
+</passage><passage file_path=src/chat/agents/codebaseDiffPerFileImplementationAgent.ts>
+        }: Partial<DefaultAskCodebaseAgent> = {}
+    )  {
+        super({type, systemMessage, firstMessagePromptPre, firstMessagePromptPost, followUpMessagePromptPre, followUpMessagePromptPost, shouldRetrieveInFollowUps, llmChatHistory, selectedCodebaseContent, functions});
+    }
+
+</passage><passage file_path=src/modules/fileSkeleton.ts>
+                    if (scope) {
+                        const scopedContent = lines.slice(scope[0][0], scope[1][0] + 1).join('\n');
+                        result += '<code file_path=' + absoluteFilePath + '>\n'
+                        result += scopedContent + '\n';
+                        result += '</code>\n'
+                    } else {
+                        console.log("method scope is undefined, file.method =", fileStructure.filename + "." + fileStructure.methodName);
+                        result += '<code file_path=' + absoluteFilePath + '>\n'
+                        result += content + '\n';
+                        result += '</code>\n'
+                    }
+                    
+                }
+
+</passage><passage file_path=src/chat/phases/diffPhase.ts>
+export class DiffPhase extends BasePhase {
+    constructor(
+        {
+			type = ChatPhaseType.diff,
+			agents = [new DiffAgent()],
+		}: Partial<BasePhase> = {}
+    ) {
+        super({type: type, agents: agents});
+    }
+
+	public override async *submitChatMessage(content:string, model:string, doNotEchoOrStore?: boolean){
+
+</passage><passage file_path=src/webview/components/AppNav.tsx>
+      <NavbarMenu style={{ backgroundColor: "#252526" }}>
+        <NavbarMenuItem>
+          <CommandLink
+            command="workbench.action.openWalkthrough"
+            args="EasyCodeAI.chatgpt-gpt4-gpt3-vscode#welcome"
+          >
+            Tutorial
+          </CommandLink>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <ExternalLink url={new URL("https://tally.so/r/n9X2YY")}>
+            Support
+          </ExternalLink>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <CommandLink
+            command="workbench.action.openSettings"
+            args="@ext:EasyCodeAI.chatgpt-gpt4-gpt3-vscode"
+          >
+            Settings
+          </CommandLink>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          {userProfile?.isPlaceholderAccount !== false ? (
+            <span
+              className="w-full hover:text-blue-500 text-white text-lg cursor-pointer"
+              onClick={() => handleLogoutAndSignUp(navigate)}
+            >
+              Sign Up
+            </span>
+          ) : (
+            <span
+
+</passage><passage file_path=src/chat/agents/diffAgent.ts>
+            //systemMessage = "Context Diff Format: \n\n*** ****\noriginal_lines_of_code\n--- ----\nupdated_lines_of_code.\n\nYou are an AI coding assistant that will answer in a context diff format. You will always format your answer as a context diff code block (```). A context diff contains multiple hunks, where each hunk will contain original_lines_of_code from the source code that need to be replaced with updated_lines_of_code. You must follow these rules when when creating each hunk:\n\n-original_lines_of_code must not be empty. Fill it with the full lines of code from the source code that needs to be replaced.\n-Be very careful when writing the diff. Your changes should not accidentally break or remove existing lines. You can reprint existing lines at the bottom or top of the updated lines.\n-original_lines_of_code is continguous and must be copied exactly from the source code, without any altering or adjustments.\n-The hunk cannot contain code abbreviations or pseudocode like (//), (...), (// ...rest of), (// ...existing), (// ...other), you must return actual lines of code.\n\nAlways format your code blocks as a context diff with multiple hunks of this format:\n\n*** ****\noriginal_lines_of_code\n--- ----\nupdated_lines_of_code.",
+            systemMessage = "You are a brilliant and meticulous engineer assigned to write code to complete the user's request. When you write code, the code works on the first try, and is complete. Take into account the current repository's language, code style, and dependencies. Your job is to make edits to the file to complete the user request. Your changes should not accidentally break or remove existing lines from old_code. You can reprint existing lines at the bottom or top of the new_code.",
+            firstMessagePromptPre = "",
+            firstMessagePromptPost = "",
+            followUpMessagePromptPre = "",
+            followUpMessagePromptPost = "",
+            shouldRetrieveInFollowUps = false,
+            llmChatHistory = [],
+            functions = [search_and_replace_schema]
+        }: Partial<DiffAgent> = {}
+
+</passage><passage file_path=src/webview/pages/components/ChatTab.tsx>
+  const handleAskCodebaseChange = (event: any) => {
+    const selected: boolean = event.target.checked;
+    setIsAskCodebase(selected);
+    if (selected == true){
+      dispatch(webviewToExtensionApi.endpoints.checkCodebasedIndexed.initiate()).then(result => {
+        dispatch(webviewToExtensionApi.util.invalidateTags(['FileSkeletonData']));
+      });
+    }
+    if (selected){
+      setIsAskWeb(!selected);
+    }
+    // Call the extensionApi here
+    //await store.dispatch(extensionApi.endpoints.yourEndpoint.initiate({ path: node.path, selected }));
+  };
+
+  const handleAskWebChange = (event: any) => {
+    const selected: boolean = event.target.checked;
+    setIsAskWeb(selected);
+    if (selected){
+      setIsAskCodebase(!selected);
+    }
+    // Call the extensionApi here
+    //await store.dispatch(extensionApi.endpoints.yourEndpoint.initiate({ path: node.path, selected }));
+  };
+
+  //let model = store.dispatch(extensionApi.endpoints.getModel.initiate());
+
+
+  const handleModelChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+
+</passage><passage file_path=src/webview/hooks/index.ts>
+export * from './redux';
+
+</passage><passage file_path=src/chat/phases/diffPhase.ts>
+
+import * as vscode from 'vscode';
+import DiffAgent from "../agents/diffAgent";
+import BasePhase from "./basePhase";
+import { createOrUpdateDiffView, extractFirstBlockAbovePlus, extractFirstPlusBlock, removeExclamationFromStartIfExists, removePlusAndExclamationFromStartIfExists, selectFirstMatchInDocument, showApplyChangesNotification } from '../../modules/diffViewProvider';
+import { debounce, doesMessageContainFilePath, extractFileContentsFromMessageContainingFilePaths, parseIncompleteJsonStream, partialParseJson } from '../../helpers/utils';
+import { ChatPhaseType } from '../../types/chatPhase';
+import { EasyCodeChatMessage } from '../../types/chatMessage';
+
+export class DiffPhase extends BasePhase {
+
+</passage><passage file_path=src/modules/diffViewProvider.ts>
+import * as vscode from 'vscode';
+const path = require('path');
+import * as fs from 'fs';
+
+
+export class VirtualFileContentProvider implements vscode.TextDocumentContentProvider {
+    private _onDidChange = new vscode.EventEmitter<vscode.Uri>();
+    private originalContent: string;
+    private uri: vscode.Uri;
+
+    constructor(uri: vscode.Uri, initialContent: string) {
+        this.uri = uri;
+        this.originalContent = initialContent;
+    }
+
+    provideTextDocumentContent(_uri: vscode.Uri): string {
+        return this.originalContent;
+    }
+
+    get onDidChange(): vscode.Event<vscode.Uri> {
+        return this._onDidChange.event;
+    }
+
+    updateContent(newContent: string) {
+        this.originalContent = newContent;
+        this._onDidChange.fire(this.uri);
+    }
+}
+
+// Keep a map of URIs to content providers
+const contentProviderMap = new Map<string, VirtualFileContentProvider>();
+
+export function createOrUpdateDiffView(document: vscode.TextDocument, selectionList: vscode.Selection[], newCodeList: string[]) {
+
+</passage><passage file_path=src/chat/agents/baseAgent.ts>
+		} else {
+			//This for loop is for an experimental FLARE implementation, ignore this for production
+			//for (var i = 0; i < 20; i++){
+				try {
+					for await (const data of Globals.getEasyCodeClient().submitChatMessage({ model: model ? model : "gpt-4", messages: this.llmChatHistory, functions: this.functions ? this.functions : undefined})) {
+						//console.log(data);
+						streamingEasyCodeChatMessage.content += data;
+                        //console.log(streamingEasyCodeChatMessage.content);
+						yield streamingEasyCodeChatMessage;
+					}
+				} catch (error:any) {
+                    if (error == 'STOPSIGNAL'){
+                        streamingEasyCodeChatMessage['easyCodeMetadata'].finishedStreaming = true;
+                        this.llmChatHistory.push(streamingEasyCodeChatMessage);
+                    }
+                    throw error;
+				}
+			//}
+		}
+
+</passage><passage file_path=src/webview/index.tsx>
+const setDark = () => {
+  // next-ui doesn't recognize class names other than 'dark'
+  // translate vscode dataset values to dark
+  // vscode-dark or vscode-high-contrast => dark mode
+  // vscode-light or vscode-high-contrast-light => light mode
+  const vscodeThemeKind = document.body.dataset.vscodeThemeKind;
+  console.log("THEME KIND: " + document.body.dataset.vscodeThemeKind);
+  rootElement.classList.toggle('dark', !!(vscodeThemeKind && ['vscode-dark', 'vscode-high-contrast'].includes(vscodeThemeKind)));
+};
+setDark();
+
+new MutationObserver(() => {
+  setDark();
+}).observe(document.body, { attributeFilter: ['data-vscode-theme-kind'], attributes: true });
+
+const router = createHashRouter(routes, {
+  future: {
+    v7_normalizeFormMethod: true,
+  },
+});
+
+const root = createRoot(rootElement);
+root.render(
+
+</passage><passage file_path=src/chat/agents/codebasePerFileImplementationAgent.ts>
+    }
+}
+
+export default CodebasePerFileImplementationAgent;
+
+</passage><passage file_path=package-lock.json>
+    "node_modules/dlv": {
+      "version": "1.1.3",
+      "resolved": "https://registry.npmjs.org/dlv/-/dlv-1.1.3.tgz",
+      "integrity": "sha512-+HlytyjlPKnIG8XuRG8WvmBP8xs8P71y+SKKS6ZXWoEgLuePxtDoUEiH7WkdePWrQ5JBpE6aoVqfZfJUQkjXwA=="
+    },
+    "node_modules/doctrine": {
+      "version": "3.0.0",
+      "resolved": "https://registry.npmjs.org/doctrine/-/doctrine-3.0.0.tgz",
+      "integrity": "sha512-yS+Q5i3hBf7GBkd4KG8a7eBNNWNGLTaEwwYWUijIYM7zrlYDM0BFXHjjPWlWZ1Rg7UaddZeIDmi9jF3HmqiQ2w==",
+      "dev": true,
+      "dependencies": {
+        "esutils": "^2.0.2"
+      },
+      "engines": {
+        "node": ">=6.0.0"
+      }
+    },
+    "node_modules/dom-helpers": {
+      "version": "5.2.1",
+      "resolved": "https://registry.npmjs.org/dom-helpers/-/dom-helpers-5.2.1.tgz",
+      "integrity": "sha512-nRCa7CK3VTrM2NmGkIy4cbK7IZlgBE/PYMn55rrXefr5xXDP0LdtfPnblFDoVdcAfslJ7or6iqAUnx0CCGIWQA==",
+      "dependencies": {
+        "@babel/runtime": "^7.8.7",
+        "csstype": "^3.0.2"
+      }
+    },
+    "node_modules/dom-serializer": {
+
+</passage><passage file_path=src/webview/pages/data/chatTab.ts>
+const action: ActionFunction = async ({ request }) => {
+  const { tabId, messageIndex, content, isAskCodebase, isAskWeb, model } = Object.fromEntries<FormDataEntryValue>(await request.formData());
+  if (!!(tabId && typeof tabId !== 'string') || !!(messageIndex && typeof messageIndex !== 'string') || !!(content && typeof content !== 'string') || !!(isAskCodebase && typeof isAskCodebase !== 'string') || !!(isAskWeb && typeof isAskWeb !== 'string')) {
+    // should not happen
+    throw new Error('Unexpected type');
+  }
+
+  let response = await store.dispatch(webviewToExtensionApi.endpoints.sendMessage.initiate({ tabId: tabId, messageIndex: parseInt(messageIndex), content: content, isAskCodebase: isAskCodebase === 'true', isAskWeb: isAskWeb === 'true', model: typeof model === 'string' ? model : null}));
+  if ('error' in response) {
+    store.dispatch(errorModal.actions.showError(response.error.message || 'No Error Message'));
+  }
+  store.dispatch(webviewToExtensionApi.endpoints.getMessageHistoryList.initiate(undefined, {forceRefetch: true}));
+  return null;
+};
+
+</passage><passage file_path=src/modules/diffViewProvider.ts>
+}
+
+export async function showApplyChangesNotification(document: vscode.TextDocument, selectionList: vscode.Selection[], newCodeList: string[]) {
+    // Show a pop-up notification with an action button
+    const applyChangesAction = 'Apply Changes';
+
+    const result = await vscode.window.showInformationMessage(
+        'Do you want to apply the changes to the file?',
+        applyChangesAction
+    );
+
+    // If the user clicks the 'Apply Changes' button, call the applyDiffChanges function
+    if (result === applyChangesAction) {
+        await applyDiffChanges(document, selectionList, newCodeList);
+    }
+}
+
+export function removePlusAndExclamationFromStartIfExists(updatedCode:string) {
+
+</passage><passage file_path=src/chat/agents/baseAgent.ts>
+import { ChatCompletionFunctions } from "openai";
+import { EasyCodeClient, SelectedCodebaseContent } from "../../apis/extensionToServerApi";
+import { OpenAIClient } from "../../apis/openaiClient";
+import { Globals } from "../../config/globals";
+import { truncateFromTop } from "../../helpers/chatHistory";
+import { createPrompt } from "../../helpers/prompt";
+import { calcMaxAvailableTokens, countMessageHistoryTokens } from "../../helpers/tokenCounters";
+import { extractPromptFilesAndMethods, removeMessageHistoryFromIndex } from "../../helpers/utils";
+import { appendFileSkeletonContent } from "../../modules/fileSkeleton";
+import { Agent, ChatAgentType } from "../../types/agents";
+import { AgentLLMChatMessage, EasyCodeChatMessage } from "../../types/chatMessage"
+
+export class BaseAgent implements Agent {
+
+</passage><passage file_path=src/modules/codeLensProvider.ts>
+    },
+});
+
+</passage><passage file_path=src/helpers/utils.ts>
+export function extractFilePathsEndingWithSpecialCharacter(text: string): string[] {
+    // This regex matches file names or paths ending with an extension
+    // It looks for sequences of characters that include:
+    // - Any character except for spaces, newlines, and tabs
+    // - A dot followed by one or more non-space characters (the file extension)
+    // - A lookahead assertion that checks for a period, comma, space, newline, or end of string
+    // The 'g' flag is used to find all matches
+    const filePathRegex = /[^\s]+?\.\w+(?=[.,\s\n]|$)/g;
+
+    const matches = text.match(filePathRegex);
+    return matches || [];
+}
+
+
+export function doesMessageContainFilePath(message:string){
+	let filePaths = extractFilePathsEndingWithSpecialCharacter(message);
+	return (filePaths && filePaths.length > 0);
+}
+
+export async function extractFileContentsFromMessageContainingFilePaths(message:string, selectedCodebaseContent: SelectedCodebaseContent | undefined, useLast: boolean, useLLM: boolean = true){
+
+</passage><passage file_path=src/modules/callGraph.ts>
+        methodNames.forEach((endElement, j) => {
+          // If the endElement does not exist in the path, the start_index below must be undefined, so there is no need to compare
+          if (i === j || !indexMap.hasOwnProperty(endElement)) return; // Skip the same elements
+          const startIndexes = indexMap[startElement];
+          const endIndexes = indexMap[endElement];
+          startIndexes.forEach(start_index => {
+
+</passage><passage file_path=src/webview/pages/components/UpgradeModal.tsx>
+              {/*
+              <>
+                <p>
+                  GPT-4 turbo credit packs are $5 for 450,000 input tokens
+                </p>
+                <Button radius='sm' color='primary' variant='shadow' onClick={(e) => dispatch(webviewToExtensionApi.endpoints.openUpgradeExternalLink.initiate({plan: "gpt-4-credits", user: userProfile}))}>
+                  <IoRocketOutline className="w-6 h-6" /> Get GPT-4 Credits
+                </Button>
+              </>
+              {!(userProfile.subscribed) &&
+                <>
+                  <p>
+                    The GPT-3.5 Pro Plan ($7 / month) provides unlimited GPT-3.5 & Claude-Instant-1, including web browsing, & in-line autocomplete
+                  </p>
+                  <Button radius='sm' color='primary' variant='shadow' onClick={(e) => dispatch(webviewToExtensionApi.endpoints.openUpgradeExternalLink.initiate({plan: "gpt-3.5-pro", user: userProfile}))}>
+                  <IoRocketOutline className="w-6 h-6" /> Get GPT-3.5 Pro
+                  </Button>
+                </>
+              }
+              {!(userProfile.subscribedCodebase) &&
+                <>
+                  <p>
+                    The Codebase Pro Plan ($20 / month) includes unlimited ask codebase with a higher limit of 1000 files. The gpt-3.5-pro plan is included
+                  </p>
+                  <Button radius='sm' color='primary' variant='shadow' onClick={(e) => dispatch(webviewToExtensionApi.endpoints.openUpgradeExternalLink.initiate({plan: "codebase-pro", user: userProfile}))}>
+                    <IoRocketOutline className="w-6 h-6" />Get Codebase Pro
+                  </Button>
+                </>
+              }
+              {(userProfile.subscribed || userProfile.subscribedCodebase) &&
+              <>
+                <p>
+                  Enter the billing portal to manage or change your subscription
+                </p>
+                <Button radius='sm' color='primary' variant='shadow' onClick={(e) => dispatch(webviewToExtensionApi.endpoints.openManageSubscriptionExternalLink.initiate({user: userProfile}))}>
+                  <IoCardOutline className="w-6 h-6" />Manage Subscription
+                </Button>
+              </>
+              }
+              */}
+
+</passage><passage file_path=src/config/globals.ts>
+    static setOpenAIClient(newOpenAIClient: OpenAIClient) {
+        this._openAIClient = newOpenAIClient;
+    }
+}
+
+</passage><passage file_path=src/helpers/utils.ts>
+export async function extractFileContentsFromMessageContainingFilePaths(message:string, selectedCodebaseContent: SelectedCodebaseContent | undefined, useLast: boolean, useLLM: boolean = true){
+
+
+	let instruction = '';
+	let filePaths = [];
+	if (useLLM){
+		if (useLast){
+			instruction = "Give me the file path(s) that will be worked on next. The file path(s) should be at the end of the message."
+			let filePathsString = await Globals.getEasyCodeClient().extractFilePathsFromPlan({message: message, instruction: instruction})
+			filePaths = extractFilePaths(filePathsString);
+		} else {
+			instruction = "Give me the file path(s) listed in the steps of this implementation."
+			let filePathsString = await Globals.getEasyCodeClient().extractFilePathsFromPlan({message: message, instruction: instruction})
+			filePaths = extractFilePaths(filePathsString);
+		}
+	} else {
+		filePaths = extractFilePaths(message);
+	}
+
+	if (filePaths.length == 0){
+		return {};
+	}
+
+	for (let filePathIndex = 0; filePathIndex < filePaths.length; filePathIndex++){
+		filePaths[filePathIndex] = filePaths[filePathIndex].replace(/^\W+|\W+$/g, '');
+	}
+
+	let maxFilesReadAtOnce = 1;
+	filePaths = filePaths.slice(0, maxFilesReadAtOnce);
+
+	let fileContents = [];
+
+</passage><passage file_path=src/webview/pages/components/UpgradeModal.tsx>
+import { Button, Modal, ModalContent, ModalHeader, ModalBody, ModalFooter} from '@nextui-org/react';
+import { useAppDispatch } from '../../hooks';
+import { webviewToExtensionApi } from '../../redux/webviewToExtensionApi';
+import { EasyCodeUser } from '../../../apis/extensionToServerApi';
+import { IoCardOutline, IoRocketOutline } from 'react-icons/io5';
+import { NavigateFunction, useNavigate } from 'react-router-dom';
+import { store } from '../../redux/store';
+
+interface UpgradeModalProps {
+  isOpen: boolean;
+  userProfile: EasyCodeUser;
+  onClose: () => void;
+}
+
+export default function UpgradeModal({ isOpen, userProfile, onClose }: UpgradeModalProps) {
+  let dispatch = useAppDispatch();
+  const navigate = useNavigate();
+
+  function handleLogout(navigate: NavigateFunction) {
+    store.dispatch(webviewToExtensionApi.endpoints.logout.initiate());
+    navigate('/auth/signup');
+  }
+
+  return (
+    <Modal radius="sm" backdrop={"blur"} size={"lg"} placement={"center"} isOpen={isOpen} onClose={onClose}>
+      <ModalContent>
+        <ModalHeader className="flex flex-col gap-1">Upgrade Your Account</ModalHeader>
+
+</passage><passage file_path=package-lock.json>
+    "node_modules/levn": {
+      "version": "0.4.1",
+      "resolved": "https://registry.npmjs.org/levn/-/levn-0.4.1.tgz",
+      "integrity": "sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==",
+      "dev": true,
+      "dependencies": {
+        "prelude-ls": "^1.2.1",
+        "type-check": "~0.4.0"
+      },
+      "engines": {
+        "node": ">= 0.8.0"
+      }
+    },
+    "node_modules/libphonenumber-js": {
+      "version": "1.10.26",
+      "resolved": "https://registry.npmjs.org/libphonenumber-js/-/libphonenumber-js-1.10.26.tgz",
+      "integrity": "sha512-oB3l4J5gEhMV+ymmlIjWedsbCpsNRqbEZ/E/MpN2QVyinKNra6DcuXywxSk/72M3DZDoH/6kzurOq1erznBMwQ==",
+      "dev": true
+    },
+    "node_modules/lie": {
+      "version": "3.1.1",
+      "resolved": "https://registry.npmjs.org/lie/-/lie-3.1.1.tgz",
+      "integrity": "sha512-RiNhHysUjhrDQntfYSfY4MU24coXXdEOgw9WGcKHNeEwffDYbF//u87M1EWaMGzuFoSbqW0C9C6lEEhDOAswfw==",
+      "dependencies": {
+        "immediate": "~3.0.5"
+      }
+    },
+
+</passage><passage file_path=src/sentry/react-webview-telemetry.ts>
+import React from 'react';
+import { createRoutesFromChildren, matchRoutes, useLocation, useNavigationType } from 'react-router-dom';
+import * as SentryReact from "@sentry/react"
+import { easycode_url } from '../keys';
+
+export const createSentryUser = ({ email }: { email?: string } = {}): SentryReact.User => ({
+    email,
+    ip_address: '{{auto}}',
+});
+
+export const initializeReactWebviewSentry = () => {
+
+</passage><passage file_path=src/chat/agents/codebasePerFileImplementationAgent.ts>
+            selectedCodebaseContent = null,
+        }: Partial<DefaultAskCodebaseAgent> = {}
+    )  {
+        super({type, systemMessage, firstMessagePromptPre, firstMessagePromptPost, followUpMessagePromptPre, followUpMessagePromptPost, shouldRetrieveInFollowUps, llmChatHistory, selectedCodebaseContent});
+    }
+
+</passage><passage file_path=src/types/chatPhase.ts>
+import { Agent } from "./agents";
+import { UserAgentChatMessage } from "./chatMessage";
+
+export enum ChatPhaseType{
+    normal,
+    diff,
+    codebaseImplementation,
+    codebaseDiffImplementation,
+    twoStepCodebasePlanning,
+    twoStepCodebaseImplementation
+  }
+
+export interface ChatPhase {
+    type: ChatPhaseType,
+    messageHistory: UserAgentChatMessage[],
+    agents: Agent[],
+    removeMessageHistoryFromIndex: (messageIndex: number) => void,
+    submitChatMessage: (content:string, model:string, doNotEchoOrStore?:boolean) => AsyncGenerator<any, any, any>,
+  }
+
+</passage><passage file_path=src/chat/agents/defaultAskCodebaseAgent.ts>
+export class DefaultAskCodebaseAgent extends BaseAgent {
+
+    public selectedCodebaseContent: SelectedCodebaseContent | null;
+    constructor(
+        {
+            type = ChatAgentType.askCodebase,
+            systemMessage = "You are an AI coding assistant. You will be provided file and code snippets, and answer the user's request.",
+            firstMessagePromptPre = "Based on the code and files above, ",
+            firstMessagePromptPost = ". Reference files and code.",
+            followUpMessagePromptPre = "",
+            followUpMessagePromptPost = "",
+            shouldRetrieveInFollowUps = true,
+            llmChatHistory = [],
+            selectedCodebaseContent = null,
+            functions = undefined,
+        }: Partial<DefaultAskCodebaseAgent> = {}
+    ) {
+        super({type, systemMessage, firstMessagePromptPre, firstMessagePromptPost, followUpMessagePromptPre, followUpMessagePromptPost, shouldRetrieveInFollowUps, llmChatHistory, functions})
+        this.selectedCodebaseContent = selectedCodebaseContent;
+    }
+
+    public override async createUserMessageFromLastUserOrAgentMessage(messages: EasyCodeChatMessage[], model: string){
+
+</passage><passage file_path=src/modules/fileSkeleton.ts>
+});
+
+const appendCallGraphContent = (async function name(call_graph: any[], depth: number, root_path: string) {
+    // Recursive only 3 levels deep
+    let result = '';
+    if (depth > 3) {
+        return result;
+    }
+    for (const cg_node of call_graph) {
+        const absoluteFilePath = root_path + cg_node.file_path;
+        const content = (await vscode.workspace.fs.readFile(vscode.Uri.file(absoluteFilePath))).toString();
+        const scope = cg_node.method.scope;
+        if (scope) {
+            const lines = content.split('\n');
+            const scopedContent = lines.slice(scope[0][0], scope[1][0] + 1).join('\n');
+            result += '<call_graph file_path=' + absoluteFilePath + '>\n'
+            result += scopedContent + '\n';
+            result += '</call_graph>\n'
+        }
+        depth += 1;
+        if (cg_node.method.call_graph?.length > 0) {
+            result += await appendCallGraphContent(cg_node.method.call_graph, depth, root_path);
+        }
+    }
+    return result;
+})
+
+export const appendFileSkeletonContent = (async function(matches: string[], userPrompt: string) {
+
+</passage><passage file_path=src/types/webviewToExtensionTypes.ts>
+const WEBVIEW_TO_EXTENSION_MESSAGES = [
+  {
+    type: "abort",
+    data: {} as {
+      reason?: AbortSignal["reason"];
+    },
+  },
+  {
+    type: "go-to-code",
+    data: {} as {
+      text: string;
+      isFileName: boolean;
+      tabId: string;
+      messageIndex: number;
+    },
+  },
+  {
+    type: "login",
+    data: {} as {
+      email?: string | null;
+      password?: string | null;
+    },
+  },
+  {
+    type: "signup",
+    data: {} as {
+      email?: string | null;
+      password?: string | null;
+      role?: string | null;
+    },
+  },
+  {
+    type: "forgot-password",
+    data: {} as {
+      email?: string | null;
+    },
+  },
+  {
+    type: "get-model",
+  },
+  {
+    type: "set-model",
+    data: {} as {
+      model: string;
+    },
+  },
+  {
+    type: "select-or-unselect-node",
+    data: {} as {
+      fileNode: FileTreeNode;
+      selected: boolean;
+      selectedFolderPath: string;
+      isProjectRoot: boolean;
+    },
+  },
+  {
+    type: "check-codebase-indexed",
+  },
+  {
+    type: "index-codebase",
+  },
+  {
+
+</passage><passage file_path=src/chat/agents/defaultAskCodebaseAgent.ts>
+            } else {
+                if (this.shouldRetrieveInFollowUps){
+                    let selectedCodebaseContent = await Globals.getEasyCodeClient().getCodebaseContentForInput({input: input, model: model, maxChunks: 5, generateQuestions: false, queryType: queryType});
+                    if (selectedCodebaseContent == undefined){
+                        throw Error("no codebase content retrieved");
+                    }
+                    this.selectedCodebaseContent = selectedCodebaseContent;
+                    this.llmChatHistory[1].content = userAtSelectionString + selectedCodebaseContent.selectedAllCodeContext + this.llmChatHistory[1].content;
+                }
+                input = this.followUpMessagePromptPre + input + this.followUpMessagePromptPost;
+                let lastUserOrAgentMessage: AgentLLMChatMessage = {
+                    role: 'user',
+                    content: input
+                };
+                this.llmChatHistory.push(lastUserOrAgentMessage);
+            }
+
+</passage><passage file_path=walkthroughs/refineContext.md>
+## Refine Context (Experimental)
+
+<img src="https://storage.googleapis.com/easycode-assets/refineContext.png" alt="Refine Context">
+
+Ask EasyCode to *only consider the files you want* and excludes the rest that don't apply to your current question. This is especially helpful when you are using a smaller context model such as gpt-3.5-turbo.
+</passage><passage file_path=src/sentry/node-extension-telemetry.ts>
+export const initializeExtensionSentry = () => {
+    SentryNode.init({
+        enabled: !!process.env.SENTRY_ENABLED,
+        release: `${process.env.npm_package_name}@${process.env.npm_package_version}`,
+        environment: process.env.NODE_ENV,
+        dsn: "https://6eca0b151027458aae43c25d5ea2c29c@o4505094109331456.ingest.sentry.io/4505094113787904",
+        // Set tracesSampleRate to 1.0 to capture 100%
+        // of transactions for performance monitoring.
+        // We recommend adjusting this value in production
+        tracesSampleRate: 0.01,
+        tracePropagationTargets: [
+            easycode_url,
+            // inline completion endpoint
+            '209.20.159.29',
+        ],
+
+        sendDefaultPii: true,
+
+        initialScope: scope => (
+            scope
+                .setUser(createSentryUser())
+                .setTags(createSentryTags())
+                .setContext('Environment Variables', runtimeProcess.env)
+        ),
+
+        // enable integrations manually to avoid problematic integrations
+        defaultIntegrations: false,
+        integrations: [
+
+</passage><passage file_path=src/chat/agents/diffAgent.ts>
+export class DiffAgent extends BaseAgent {
+
+    constructor(
+        {
+            type = ChatAgentType.diff,
+            //systemMessage = "Context Diff Format: \n\n*** ****\noriginal_lines_of_code\n--- ----\nupdated_lines_of_code.\n\nYou are an AI coding assistant that will answer in a context diff format. You will always format your answer as a context diff code block (```). A context diff contains multiple hunks, where each hunk will contain original_lines_of_code from the source code that need to be replaced with updated_lines_of_code. You must follow these rules when when creating each hunk:\n\n-original_lines_of_code must not be empty. Fill it with the full lines of code from the source code that needs to be replaced.\n-Be very careful when writing the diff. Your changes should not accidentally break or remove existing lines. You can reprint existing lines at the bottom or top of the updated lines.\n-original_lines_of_code is continguous and must be copied exactly from the source code, without any altering or adjustments.\n-The hunk cannot contain code abbreviations or pseudocode like (//), (...), (// ...rest of), (// ...existing), (// ...other), you must return actual lines of code.\n\nAlways format your code blocks as a context diff with multiple hunks of this format:\n\n*** ****\noriginal_lines_of_code\n--- ----\nupdated_lines_of_code.",
+
+</passage><passage file_path=src/webviewProvider/Webview.tsx>
+            <meta charSet="UTF-8" />
+            <meta name="viewport" content="width=device-width,initial-scale=1" />
+            <script type="module" src={webview.asWebviewUri(webpackRuntime).toString()} />
+            <script type="module" src={webview.asWebviewUri(jsVendor).toString()} />
+            <script type="module" src={webview.asWebviewUri(jsEntry).toString()} />
+            <link rel="stylesheet" href={webview.asWebviewUri(stylesheet).toString()} />
+            <title />
+        </head>
+        <body>
+        <div id="root" data-icon-uri={iconUri.toString()} />
+        </body>
+        </html>
+    );
+}
+
+export const renderWebview = (params: WebviewProps) => {
+    // use static markup because vscode modifies the html
+    return renderToStaticMarkup(<Webview {...params} />);
+};
+
+</passage><passage file_path=src/helpers/chatHistory.ts>
+export async function truncateFromTop(chatHistory: EasyCodeChatMessage[], fullLength: number, targetLength: number) {
+    //We need to do some smart truncating
+    const messageHistory = chatHistory;
+    if (fullLength <= targetLength) {
+        return [...messageHistory];
+    }
+
+    // copy of messages before the first user message
+    const truncatedHistory = [...sliceMessageHistory(messageHistory, 0)];
+    let truncatedHistoryLength = fullLength;
+
+    let i: number;
+    let firstUserMsgAdded = false;
+    for (i = truncatedHistory.length; i < messageHistory.length; i++) {
+
+</passage><passage file_path=src/chat/agents/defaultAskCodebaseAgent.ts>
+import { EasyCodeClient, SelectedCodebaseContent } from "../../apis/extensionToServerApi";
+import { OpenAIClient } from "../../apis/openaiClient";
+import { Globals } from "../../config/globals";
+import { extractPromptFilesAndMethods } from "../../helpers/utils";
+import { appendFileSkeletonContent } from "../../modules/fileSkeleton";
+import { Agent, ChatAgentType } from "../../types/agents";
+import { AgentLLMChatMessage, EasyCodeChatMessage } from "../../types/chatMessage"
+import BaseAgent from "./baseAgent";
+
+export class DefaultAskCodebaseAgent extends BaseAgent {
+
+</passage><passage file_path=src/chat/agents/baseAgent.ts>
+    constructor(
+        {
+            type = ChatAgentType.default,
+            systemMessage = "You are an AI coding assistant.",
+            firstMessagePromptPre = "",
+            firstMessagePromptPost = "",
+            followUpMessagePromptPre = "",
+            followUpMessagePromptPost = "",
+            shouldRetrieveInFollowUps = false,
+            llmChatHistory = [],
+            functions = undefined
+        }: Partial<BaseAgent> = {}
+    ) {
+        this.type = type;
+        this.systemMessage = systemMessage;
+        this.firstMessagePromptPre = firstMessagePromptPre;
+        this.firstMessagePromptPost = firstMessagePromptPost;
+        this.followUpMessagePromptPre = followUpMessagePromptPre;
+        this.followUpMessagePromptPost = followUpMessagePromptPost;
+        this.shouldRetrieveInFollowUps = shouldRetrieveInFollowUps;
+        this.llmChatHistory = llmChatHistory;
+        this.functions = functions;
+    }
+
+    public async populateSystemMessageIfNewChat(){
+
+</passage><passage file_path=src/webview/pages/data/forgotPassword.ts>
+import { json } from 'react-router-dom';
+import { webviewToExtensionApi } from '../../redux/webviewToExtensionApi';
+import { store } from '../../redux/store';
+import type { JsonType } from '../../routes/types';
+import ForgotPassword from '../components/ForgotPassword';
+import type { ActionFunction } from '@remix-run/router';
+
+const action: ActionFunction = async ({ request }) => {
+  const { email } = Object.fromEntries<FormDataEntryValue>(await request.formData());
+
+  if (!!(email && typeof email !== 'string')) {
+    // should not happen
+    throw new Error('Unexpected type');
+  }
+
+  const result = await store.dispatch(webviewToExtensionApi.endpoints.forgotPassword.initiate({ email }));
+  console.log(result);
+  if ('error' in result) {
+    return json<JsonType<'forgotPassword'>>({ forgotPassword: result });
+  } else {
+    return json<JsonType<'forgotPassword'>>({ forgotPassword: result });
+  }
+};
+
+export default {
+  Component: ForgotPassword,
+  action,
+};
+
+</passage><passage file_path=src/webview/pages/components/TryWithoutAccount.tsx>
+import { Spinner } from '@nextui-org/react';
+import { useEffect, useRef } from 'react';
+import { useNavigation, useSubmit } from 'react-router-dom';
+import { useAppActionData } from '../../hooks';
+
+export default function TryWithoutAccount() {
+  const firstLoad = useRef<boolean>(true);
+  const data = useAppActionData<'loginWithPlaceholder'>()?.loginWithPlaceholder;
+  const navigation = useNavigation();
+
+  const submit = useSubmit();
+  useEffect(() => {
+    if (firstLoad.current) {
+      // prevent the 2nd effect triggered by React strict mode from calling submit
+      firstLoad.current = false;
+      submit(null, { method: 'POST', replace: true });
+    }
+  }, []);
+
+  return (
+    <div className="flex h-full px-6">
+      {navigation.state !== 'idle' && <Spinner label="Loading" className="mx-auto" />}
+      {(data && 'error' in data) && (
+        <div className="text-danger">{data.error?.message}</div>
+      )}
+    </div>
+  );
+}
+
+</passage><passage file_path=src/webview/pages/data/signup.ts>
+import { json, redirect } from 'react-router-dom';
+import { webviewToExtensionApi } from '../../redux/webviewToExtensionApi';
+import { store } from '../../redux/store';
+import Signup from '../components/Signup';
+import type { JsonType } from '../../routes/types';
+import type { ActionFunction } from '@remix-run/router';
+
+const action: ActionFunction = async ({ request }) => {
+
+</passage><passage file_path=src/chat/agents/codebaseTwoStepPlanningAgent.ts>
+            shouldRetrieveInFollowUps = true,
+            llmChatHistory = [],
+            selectedCodebaseContent = null
+        }: Partial<DefaultAskCodebaseAgent> = {}
+
+</passage><passage file_path=src/webview/routes/routes.tsx>
+import { createRoutesFromElements, redirect, Route } from 'react-router-dom';
+import { chatLayout, chatTab, forgotPassword, layout, login, signup, tryWithoutAccount } from '../pages';
+
+// TODO: error boundary
+const routes = createRoutesFromElements(
+  <Route path="/" {...layout}>
+    <Route index loader={() => redirect('chat')} />
+
+    <Route path="/auth">
+      <Route index loader={() => redirect('login')} />
+      <Route path="signup" {...signup} />
+      <Route path="login" {...login} />
+      <Route path="forgot-password" {...forgotPassword} />
+      <Route path="try" {...tryWithoutAccount} />
+    </Route>
+
+    <Route path="/chat">
+      <Route {...chatLayout}>
+        <Route index loader={() => redirect('new')} />
+        <Route path="new" element={<div></div>} />
+        <Route path=":tabId" {...chatTab} />
+      </Route>
+    </Route>
+  </Route>,
+);
+
+export default routes;
+
+</passage><passage file_path=src/types/webviewToExtensionTypes.ts>
+  {
+    type: "insert-code",
+    data: {} as {
+      code: string;
+    },
+  },
+  {
+    type: "diff-code",
+    data: {} as {
+      code: string;
+    },
+  },
+  {
+    type: "chat-action",
+    data: {} as {
+      action: ChatAction;
+      tabId: string;
+    },
+  },
+  {
+    type: "abort-all-streams",
+  },
+  {
+    type: "send-message",
+    data: {} as {
+      tabId?: string | null;
+      messageIndex?: number | null;
+      content?: string | null;
+      isAskCodebase?: boolean | null;
+      isAskWeb?: boolean | null;
+      model?: string | null;
+    },
+  },
+  {
+    type: "file-skeleton-data",
+  },
+] as const;
+
+</passage><passage file_path=src/chat/agents/readFileContentAgent.ts>
+    }
+    public async createChatMessages(messages: EasyCodeChatMessage[], model?: string){
+        let message = messages[messages.length-1].content
+        if (message){
+            let fileContent = await this.readFileContentFromMessageContainingFilePath(message);
+            this.fileContent = fileContent;
+        } else {
+            throw 'no message submitted'
+        }
+    }
+
+    public async *submitChatMessage(model:string) {
+
+        let streamingEasyCodeChatMessage: AgentLLMChatMessage = {
+            role: 'assistant',
+            content: this.fileContent,
+        }
+
+        yield streamingEasyCodeChatMessage as EasyCodeChatMessage;
+        throw 'STOPSIGNAL'
+    }
+}
+
+</passage><passage file_path=src/webview/pages/data/chatLayout.ts>
+import { json } from 'react-router-dom';
+import { webviewToExtensionApi } from '../../redux/webviewToExtensionApi';
+import { store } from '../../redux/store';
+import ChatLayout from '../components/ChatLayout';
+import type { JsonType } from '../../routes/types';
+import type { LoaderFunction } from 'react-router-dom';
+
+const loader: LoaderFunction = async () => {
+  const messageListPromise = store.dispatch(webviewToExtensionApi.endpoints.getMessageHistoryList.initiate());
+  const result = await messageListPromise;
+  messageListPromise.unsubscribe();
+
+  const { data, error } = result;
+  return json<JsonType<'getMessageHistoryList'>>({ getMessageHistoryList: { data, error } });
+};
+
+export default {
+  Component: ChatLayout,
+  loader,
+};
+
+</passage><passage file_path=src/sentry/react-webview-telemetry.ts>
+      });
+}
+
+</passage><passage file_path=src/chat/chats/baseChat.ts>
+    public async *submitChatMessage(content:string, model:string) {
+        try {
+			for await (let { message, messageIndex } of this.phases[this.currentPhaseIndex].submitChatMessage(content, model)) {
+				messageIndex = this.calcPhaseMessageIndexAdjustment() + messageIndex;
+                yield { message, messageIndex };
+			}
+		} catch (error: any) {
+            throw error;
+        }
+    }
+
+}
+
+</passage><passage file_path=src/webviewProvider/Webview.tsx>
+import path from 'path';
+import { renderToStaticMarkup } from 'react-dom/server';
+import { Uri } from 'vscode';
+
+import type { Webview, ExtensionContext } from 'vscode';
+
+export interface WebviewProps {
+    context: ExtensionContext,
+    webview: Webview,
+}
+
+export default function Webview({ context, webview }: WebviewProps) {
+    const iconPath = Uri.file(path.join(context.extensionPath, 'resources', 'old_extensionIcon.png'));
+    const iconUri = webview.asWebviewUri(iconPath);
+    const jsEntry = Uri.joinPath(context.extensionUri, 'dist', 'main.webview.js');
+    const jsVendor = Uri.joinPath(context.extensionUri, 'dist', 'vendor.webview.js');
+    const webpackRuntime = Uri.joinPath(context.extensionUri, 'dist', 'runtime.webview.js');
+    const stylesheet = Uri.joinPath(context.extensionUri, 'dist', 'main.webview.css');
+
+    return (
+        <html lang="en">
+        <head>
+            <meta charSet="UTF-8" />
+
+</passage><passage file_path=src/helpers/utils.ts>
+		}
+
+		const fileSummaryMapsKey = 'fileSummaryMapsKey';
+		let fileSummaryMaps = new Map<String, String>();
+		const context = await vscode.commands.executeCommand("getContext") as vscode.ExtensionContext;
+		if (context.workspaceState.get(fileSummaryMapsKey) as string){
+			fileSummaryMaps = new Map<String, String>(JSON.parse(context.workspaceState.get(fileSummaryMapsKey) as string));
+			if (fileSummaryMaps && fileSummaryMaps.has(workspace_path as string)){
+				fileSummaryMaps = new Map<String, String>(JSON.parse(fileSummaryMaps.get(workspace_path as String) as string));
+			}
+		}
+		for (let [key, value] of fileSummaryMaps.entries()){
+			let fileSummaryMapFilePath = key as string;
+			if (fileSummaryMapFilePath.includes(filePath)){
+				let fileUri = vscode.Uri.joinPath(vscode.Uri.file(workspace_path), fileSummaryMapFilePath);
+				let data = await vscode.workspace.fs.readFile(fileUri);
+				let fileContent = data.toString();
+				fileContents.push(fileContent);
+				fileUris.push(fileUri);
+				break;
+			}
+		}
+	}
+
+</passage><passage file_path=tsconfig.json>
+{
+	"experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+	"compilerOptions": {
+		"module": "commonjs",
+		"esModuleInterop": true,
+		"target": "ES2020",
+		"lib": [
+			"ES2020"
+		],
+		"isolatedModules": true,
+		"jsx": "react-jsx",
+		"sourceMap": true,
+		"rootDir": "src",
+		"strict": true   /* enable all strict type-checking options */
+		/* Additional Checks */
+		// "noImplicitReturns": true, /* Report error when not all code paths in function return a value. */
+		// "noFallthroughCasesInSwitch": true, /* Report errors for fallthrough cases in switch statement. */
+		// "noUnusedParameters": true,  /* Report errors on unused parameters. */
+	},
+	"include": ["src/**/*"],
+	"exclude": ["src/webview/**/*"]
+}
+
+</passage><passage file_path=src/sentry/react-webview-telemetry.ts>
+export const initializeReactWebviewSentry = () => {
+    SentryReact.init({
+        enabled: !!process.env.SENTRY_ENABLED,
+        release: `${process.env.npm_package_name}@${process.env.npm_package_version}`,
+        environment: process.env.NODE_ENV,
+        dsn: "https://d95c2e12efc5488cabcbc5c4ddbfa207@o4505094109331456.ingest.sentry.io/4505094523387904",
+
+        sendDefaultPii: true,
+
+        integrations: [
+          new SentryReact.BrowserTracing({
+            // See docs for support of different versions of variation of react router
+            // https://docs.sentry.io/platforms/javascript/guides/react/configuration/integrations/react-router/
+            routingInstrumentation: SentryReact.reactRouterV6Instrumentation(
+              React.useEffect,
+              useLocation,
+              useNavigationType,
+              createRoutesFromChildren,
+              matchRoutes
+            ),
+          }),
+          new SentryReact.Replay({
+            maskAllText: false,
+            maskAllInputs: false,
+            blockAllMedia: false,
+          }),
+        ],
+
+        // Set tracesSampleRate to 0.01 to capture 1%
+
+</passage><passage file_path=src/types/types.ts>
+export type ExtensionSettings = {selectedInsideCodeblock?: boolean, copyOnClick?: boolean, model?: string, maxTokens?: number, temperature?: number, userEmail?: string, openAIApiKey?: string, inlineCompletion?: boolean, dataCollection?: boolean, useOwnApiKey?:boolean, usePromptAssistant?:boolean, useActiveViewContext?:boolean}
+
+</passage><passage file_path=src/webview/pages/data/chatTab.ts>
+import { json } from 'react-router-dom';
+import { webviewToExtensionApi } from '../../redux/webviewToExtensionApi';
+import { store } from '../../redux/store';
+import ChatTab from '../components/ChatTab';
+import type { JsonType } from '../../routes/types';
+import type { ActionFunction } from '@remix-run/router';
+import type { LoaderFunction } from 'react-router-dom';
+import { useAppDispatch } from '../../hooks';
+import { errorModal } from '../../redux/error';
+
+const loader: LoaderFunction = async ({ params }) => {
+  const { tabId } = params;
+
+  const messagesPromise = store.dispatch(webviewToExtensionApi.endpoints.getMessagesOrChat.initiate({ tabId }));
+  const messages = await messagesPromise;
+  messagesPromise.unsubscribe();
+
+  const { data, error } = messages;
+  return json<JsonType<'getMessagesOrChat'>>({ getMessagesOrChat: { data, error } });
+};
+
+const action: ActionFunction = async ({ request }) => {
+
+</passage><passage file_path=src/sentry/easycodeSentryGlobal.ts>
+const globalProxy = new Proxy(globalThis, {
+    get(target, p, receiver) {
+        const actualTarget = resolveTarget(p, target);
+        return Reflect.get(actualTarget, p, receiver);
+    },
+    set(target, p, newValue, receiver) {
+        const actualTarget = resolveTarget(p, target);
+        return Reflect.set(actualTarget, p, newValue, receiver);
+    },
+    defineProperty(target, p, attributes) {
+        const actualTarget = resolveTarget(p, target);
+        return Reflect.defineProperty(actualTarget, p, attributes);
+    },
+    deleteProperty(target, p) {
+        const actualTarget = resolveTarget(p, target);
+        return Reflect.deleteProperty(actualTarget, p);
+    },
+    getOwnPropertyDescriptor(target, p) {
+        const actualTarget = resolveTarget(p, target);
+        return Reflect.getOwnPropertyDescriptor(actualTarget, p);
+    },
+    has(target, p) {
+        const actualTarget = resolveTarget(p, target);
+        return Reflect.has(actualTarget, p);
+    },
+    ownKeys(target) {
+
+</passage><passage file_path=src/chat/agents/readFileContentAgent.ts>
+export class ReadFileContentAgent extends BaseAgent {
+
+    public selectedCodebaseContent: SelectedCodebaseContent;
+    private step: number = 0;
+    public filePath: string = '';
+    public fileContent: string = '';
+    constructor(
+        {
+        type = ChatAgentType.readFileContent,
+        systemMessage = "",
+        firstMessagePromptPre = "",
+        firstMessagePromptPost = "",
+        followUpMessagePromptPre = "",
+        followUpMessagePromptPost = "",
+        shouldRetrieveInFollowUps = true,
+        llmChatHistory = [],
+        selectedCodebaseContent = {} as SelectedCodebaseContent,
+        }: Partial<ReadFileContentAgent> = {}
+    ) {
+        super({type, systemMessage, firstMessagePromptPre, firstMessagePromptPost, followUpMessagePromptPre, followUpMessagePromptPost, shouldRetrieveInFollowUps, llmChatHistory});
+        this.selectedCodebaseContent = selectedCodebaseContent;
+    }
+
+    public async readFileContentFromMessageContainingFilePath(message:string){
+
+</passage><passage file_path=src/webview/pages/components/FileTree.tsx>
+import { Checkbox, Accordion, AccordionItem, CheckboxGroup } from '@nextui-org/react';
+import { webviewToExtensionApi } from '../../redux/webviewToExtensionApi';
+import { store } from '../../redux/store';
+import { createContext, useContext, useEffect, useState } from 'react';
+import { stringify } from 'querystring';
+import { FileTreeNode } from '../../../types/types';
+
+interface FileTreeProps {
+  node: FileTreeNode;
+  isRoot: boolean;
+  onCheckboxChange: (node: FileTreeNode, selected: boolean) => void;
+}
+
+export const FileTree: React.FC<FileTreeProps> = ({ node, isRoot, onCheckboxChange }) => {
+
+  const handleCheckboxChange = (event: any, node: FileTreeNode) => {
+    const selected = event.target.checked;
+    onCheckboxChange(node, selected);
+  }
+
+  if (node.isFile) {
+    return (
+      <Checkbox value={node.path} key={node.path} isSelected={node.selected} onChange={(event) => handleCheckboxChange(event, node)}>
+        {node.name}
+      </Checkbox>
+    );
+  }
+
+  //Else, this is a folder
+  return (
+    isRoot ?
+
+</passage><passage file_path=src/webview/pages/components/ChatLayout.tsx>
+  useEffect(() => {
+    console.log("messageHistory length: " + data?.messageHistory.length);
+    addTab().then(result => {
+      if ('data' in result){
+        let newTabId = result?.data.newTabId;
+        navigate(`${newTabId}`);
+      }
+    })
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
+
+
+  const addTab = async () => {
+    return await store.dispatch(webviewToExtensionApi.endpoints.addTab.initiate());
+  };
+
+  const deleteTab = (tabIdToDelete: string) => {
+    store.dispatch(webviewToExtensionApi.endpoints.deleteTab.initiate({tabIdToDelete})).then(e => {
+      let newTabId = data?.messageHistory[data?.messageHistory.length-1].id;
+      navigate(`${newTabId}`);
+      }
+    )
+  };
+
+  return (
+    <div className="flex flex-col max-h-screen mt-0 pt-0 mb-0 pt-0">
+      <div className="flex flex-row w-full max-w-[80%] items-center gap-2 justify-end transform -translate-y-4">
+
+</passage><passage file_path=src/chat/phases/codebaseExplainPhase.ts>
+import CodebaseExplainAgent from "../agents/codebaseExplainAgent"
+import CodebaseDiffPerFileImplementationAgent from "../agents/codebaseDiffPerFileImplementationAgent";
+import CodebaseTwoStepPlanningAgent from "../agents/codebaseTwoStepPlanningAgent";
+import DefaultAskCodebaseAgent from "../agents/defaultAskCodebaseAgent";
+import { Agent } from "../../types/agents";
+import BasePhase from "./basePhase";
+
+export class CodebaseExplainPhase extends BasePhase {
+    constructor(
+        {
+			agents = [new CodebaseExplainAgent()],
+		}: Partial<BasePhase> = {}
+    ) {
+        super({agents: agents});
+    }
+}
+
+export default CodebaseExplainPhase;
+
+</passage><passage file_path=src/chat/agents/codebaseCallGraphAgent.ts>
+import { Agent, ChatAgentType } from "../../types/agents";
+import DefaultAskCodebaseAgent from "./defaultAskCodebaseAgent";
+import { create_call_graph_schema } from "./function_schemas/function_schemas";
+
+
+export class CodebaseCallGraphAgent extends DefaultAskCodebaseAgent {
+
+</passage><passage file_path=src/chat/agents/codeFeedbackAgent.ts>
+import { Agent, ChatAgentType } from "../../types/agents";
+import { AgentLLMChatMessage } from "../../types/chatMessage"
+import BaseAgent from "./baseAgent";
+
+export class CodeFeedbackAgent extends BaseAgent {
+
+    constructor(
+        public type: ChatAgentType = ChatAgentType.codeFeedback,
+        public systemMessage: string = "You are a code linter that will reply with an error message for the code provided. You will make up an error for your first reply. Your second reply must be 'SUCCESS'",
+        public firstMessagePromptPre: string = "",
+        public firstMessagePromptPost: string = "",
+        public followUpMessagePromptPre: string = "",
+        public followUpMessagePromptPost: string = "",
+        public shouldRetrieveInFollowUps: boolean = true,
+        public llmChatHistory: AgentLLMChatMessage[] = [],
+    ) {
+        super();
+    }
+}
+
+export default CodeFeedbackAgent;
+
+</passage><passage file_path=src/types/webviewToExtensionTypes.ts>
+  {
+    type: "delete-directory",
+    data: {} as {
+      selectedFolderPath: string;
+    },
+  },
+  {
+    type: "index-local-directory",
+  },
+  {
+    type: "open-primary-gitignore-file",
+  },
+  {
+    type: "addTab",
+  },
+  {
+    type: "deleteTab",
+    data: {} as {
+      tabIdToDelete: string;
+    },
+  },
+  {
+    type: "logout",
+  },
+  {
+    type: "login-with-placeholder",
+  },
+  {
+    type: "is-user-logged-in",
+  },
+  {
+    type: "user-profile",
+  },
+  {
+    type: "open-manage-subscription-external-link",
+    data: {} as {
+      user: EasyCodeUser;
+    },
+  },
+  {
+    type: "open-upgrade-external-link",
+    data: {} as {
+      plan: string;
+      user: EasyCodeUser;
+    },
+  },
+  {
+    type: "get-message-history-list",
+  },
+  {
+    type: "get-all-directories-file-tree",
+  },
+  {
+    type: "get-messages-or-chat",
+    data: {} as {
+      tabId?: string | null;
+    },
+  },
+  {
+    type: "copy-code",
+    data: {} as {
+      code: string;
+    },
+  },
+  {
+
+</passage><passage file_path=src/modules/callGraph.ts>
+import {getCallGraphMapMetadata} from './fileSkeleton'
+import { coordIdxsToCharIdx } from '../helpers/utils'
+
+function extractCodeDetails(methodIdentifierString: string) {
+  const [filePath, rest] = methodIdentifierString.split('@');
+  const [methodName, lineScope] = rest.split('#');
+  const [startLine, endLine] = lineScope.slice(1).split('-L');
+  return {
+    filePath: filePath,
+    methodName: methodName,
+    scope: [parseInt(startLine, 10), parseInt(endLine, 10)]
+  };
+}
+
+
+export async function resolveCallerStructure(callGraphMapMetadata: any) {
+  const callGraphMapdata = new Map<string, any>(Object.entries(callGraphMapMetadata));
+  for (const methodsObject of callGraphMapdata.values()) {
+    if (!methodsObject || !methodsObject.methods || methodsObject.methods.length == 0) {
+      continue
+    }
+    resolveCallGraph(methodsObject.methods, callGraphMapdata)
+  }
+}
+
+function resolveCallGraph(methods: any[], callGraphMapdata: Map<string, any>) {
+
+</passage><passage file_path=src/sentry/easycodeSentryGlobal.ts>
+const KEY = '__SENTRY__' as const;
+const sentryStore: { [KEY]: any } = { [KEY]: undefined };
+
+const resolveTarget = <T>(p: string | symbol, target: T) => {
+    return p === KEY ? sentryStore : target;
+};
+
+// Create a proxy for globalThis for Sentry
+// to isolate the global __SENTRY__ variable
+const globalProxy = new Proxy(globalThis, {
+
+</passage><passage file_path=src/chat/phases/twoStepCodebasePlanningPhase.ts>
+import CodebaseTwoStepPlanningAgent from "../agents/codebaseTwoStepPlanningAgent";
+import { ChatPhaseType } from "../../types/chatPhase";
+import BasePhase from "./basePhase";
+
+export class TwoStepCodebasePlanningPhase extends BasePhase {
+    constructor(
+        {
+            type = ChatPhaseType.twoStepCodebasePlanning,
+            messageHistory = [],
+			agents = [new CodebaseTwoStepPlanningAgent()],
+            agentIndex = 0,
+            agentIterationsLeft = 1
+		}: Partial<BasePhase> = {}
+    ) {
+        super({type, messageHistory, agents, agentIndex, agentIterationsLeft});
+    }
+}
+
+export default TwoStepCodebasePlanningPhase;
+
+</passage><passage file_path=src/chat/chats/codebaseExplainChat.ts>
+import { Chat, ChatType } from "../../types/chat";
+import { ChatPhase } from "../../types/chatPhase";
+import BaseChat from "./baseChat";
+import AskCodebasePhase from "../phases/askCodebasePhase";
+import BasePhase from "../phases/basePhase";
+import CodebaseExplainPhase from "../phases/codebaseExplainPhase";
+
+export class CodebaseExplainChat extends BaseChat {
+
+    constructor(
+        {
+            type = ChatType.codebaseExplain,
+            phases = [new CodebaseExplainPhase()],
+            currentPhaseIndex = 0,
+            title = ''
+        }: Partial<CodebaseExplainChat> = {}
+    ) {
+        super({ type, phases, currentPhaseIndex, title });
+    }
+}
+
+export default CodebaseExplainChat;
+
+</passage><passage file_path=src/chat/phases/codebaseCallGraphPhase.ts>
+import CodebaseCallGraphAgent from "../agents/codebaseCallGraphAgent";
+import BasePhase from "./basePhase";
+
+export class CodebaseCallGraphPhase extends BasePhase {
+    constructor(
+        {
+			agents = [new CodebaseCallGraphAgent()],
+		}: Partial<BasePhase> = {}
+    ) {
+        super({agents: agents});
+    }
+}
+
+export default CodebaseCallGraphPhase;
+
+</passage><passage file_path=src/webview/components/EditorContextMenuListener.tsx>
+      switch (message.type) {
+        case 'contextMenuOptionSelected':
+          console.log(message.data);
+          if (message.data.option == 'ask'){
+          // Dispatch an action to extensionApi
+          //console.log(message);
+          //console.log("dispatching setInputText Action");
+            dispatch(webviewToExtensionApi.endpoints.addTab.initiate()).then(result => {
+              if ('data' in result){
+                let newTabId = result?.data.newTabId;
+                dispatch(inputText.actions.setInputText({text: message.data.selectedText + '\n\n' + message.data.input, tabId: newTabId}));
+              }
+            })
+          } else if (message.data.option == 'index-codebase'){
+            dispatch(webviewToExtensionApi.endpoints.indexCodebase.initiate())
+          } else if (message.data.option == 'refresh-file-tree'){
+            dispatch(webviewToExtensionApi.util.invalidateTags(['FileTree']));
+          }
+          break;
+        case 'fixIssue':
+
+</passage><passage file_path=src/chat/chats/askCodebaseChat.ts>
+import { Chat, ChatType } from "../../types/chat";
+import { ChatPhase } from "../../types/chatPhase";
+import BaseChat from "./baseChat";
+import AskCodebasePhase from "../phases/askCodebasePhase";
+import BasePhase from "../phases/basePhase";
+
+export class AskCodebaseChat extends BaseChat {
+
+    constructor(
+        {
+            type = ChatType.askCodebase,
+            phases = [new AskCodebasePhase()],
+            currentPhaseIndex = 0,
+            title = ''
+        }: Partial<AskCodebaseChat> = {}
+    ) {
+        super({ type, phases, currentPhaseIndex, title });
+    }
+}
+
+export default AskCodebaseChat;
+
+</passage><passage file_path=src/chat/chats/codebaseCallGraphChat.ts>
+import { Chat, ChatType } from "../../types/chat";
+import BaseChat from "./baseChat";
+import CodebaseCallGraphPhase from "../phases/codebaseCallGraphPhase";
+
+export class CodebaseCallGraphChat extends BaseChat {
+
+    constructor(
+        {
+            type = ChatType.codebaseExplain,
+            phases = [new CodebaseCallGraphPhase()],
+            currentPhaseIndex = 0,
+            title = ''
+        }: Partial<CodebaseCallGraphChat> = {}
+    ) {
+        super({ type, phases, currentPhaseIndex, title });
+    }
+}
+
+export default CodebaseCallGraphChat;
+
+</passage><passage file_path=src/types/chat.ts>
+import { ChatPhase } from "./chatPhase";
+
+export enum ChatType {
+    uninitialized,
+    default,
+    askCodebase,
+    codebaseExplain,
+    codebaseTwoStepPlanningAndImplementation,
+    codebaseSearch,
+    codebaseImplementation,
+    codebaseDiffImplementation
+}
+
+export enum ChatAction {
+    startCodebaseImplementationCoding,
+    startNextFileImplementation,
+    viewCurrentCodebaseImplementationPlan,
+    generateCodeDiff
+}
+
+export enum ChatCommand {
+    DiffModify = "DiffModify",
+    DiffImplement = "DiffImplement",
+    Implement = "Implement",
+    Explain = "Explain",
+    CallGraph = "CallGraph",
+    PlanAndImplement = "PlanAndImplement",
+    Search = "Search"
+}
+
+export interface Chat {
+    type: ChatType,
+    phases: ChatPhase[],
+    currentPhaseIndex: number,
+    title: string,
+    actions: ChatAction[],
+    evokeAction: (action: ChatAction) => AsyncGenerator<any, any, any>,
+    submitChatMessage: (content:string, model:string) => AsyncGenerator<any, any, any>
+
+}
+
+</passage><passage file_path=src/webview/pages/components/Signup.tsx>
+import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Input, Select } from '@nextui-org/react';
+import { useState } from 'react';
+import { Form, useFetcher, useNavigation } from 'react-router-dom';
+
+import type { Selection } from '@nextui-org/react';
+import type { Key} from 'react';
+import { useAppActionData } from '../../hooks';
+
+const ROLE_OPTIONS = [
+  { key: '', label: 'Select Your Role' },
+  { key: 'DV', label: 'Developer' },
+  { key: 'ID', label: 'IT/Devops' },
+  { key: 'QA', label: 'QA' },
+  { key: 'DS', label: 'Data Scientist' },
+  { key: 'PR', label: 'Product' },
+  { key: 'ST', label: 'Student' },
+  { key: 'OT', label: 'Other' },
+];
+
+const DISABLED_OPTIONS = [''];
+
+export default function Signup() {
+
+</passage><passage file_path=src/webview/pages/components/FileTree.tsx>
+    isRoot ?
+
+    <Accordion defaultExpandedKeys={['root']} isCompact fullWidth={false} className="ml-0 my-0 px-0 py-0">
+        <AccordionItem key="root" classNames={{indicator: "order-first -rotate-180 mr-0 pr-0"}} className="ml-0 my-0 px-0 py-0" startContent={<Checkbox className="pl-1 my-0 py-0" key={node.path} value={node.path} isSelected={node.selected} onChange={(event) => handleCheckboxChange(event, node)}>{node.name}</Checkbox>}>
+            <div className="ml-12 my-0 py-0 flex flex-col">
+            {node.children?.map(childNode => (
+                <FileTree key={childNode.path} node={childNode} isRoot={false} onCheckboxChange={onCheckboxChange}/>
+            ))}
+            </div>
+        </AccordionItem>
+    </Accordion>
+    :
+
+    <Accordion isCompact fullWidth={false} className="-ml-6 my-0 px-0 py-0">
+        <AccordionItem 
+          // setting trigger to my-0 ensures there is no extra spacing.
+          classNames={{trigger: "my-0, py-0", indicator: "order-first -rotate-180 mr-0 pr-0"}} 
+          className="ml-0 my-0 px-0 py-0" 
+
+</passage><passage file_path=src/modules/codeActionsProvider.ts>
+export class EasyCodeActionsProvider implements CodeActionProvider {
+    public static readonly providedCodeActionKinds = [
+        CodeActionKind.QuickFix
+    ];
+
+    public provideCodeActions(document: TextDocument, range: Range | vscode.Selection, context: CodeActionContext, token: CancellationToken): vscode.ProviderResult<CodeAction[]> {
+        if (!isCodeActionsEnabled()) {
+            return null;
+        }
+
+        // Filter out diagnostics that are not within the range specified
+        const diagnostics = context.diagnostics.filter(diagnostic => range.intersection(diagnostic.range) !== undefined);
+
+        if (diagnostics.length === 0) {
+            return [];
+        }
+
+        const actions: CodeAction[] = diagnostics.map(diagnostic => this.createCodeAction(document, diagnostic));
+
+        return actions;
+    }
+
+    private createCodeAction(document: TextDocument, diagnostic: Diagnostic): CodeAction {
+
+</passage><passage file_path=src/webview/pages/data/layout.ts>
+  return json<JsonType<'isLoggedIn'>>({ isLoggedIn: { data: { isLoggedIn: false } } });
+};
+
+const shouldRevalidate: ShouldRevalidateFunction = () => true;
+
+export default {
+  Component: Layout,
+  loader,
+  shouldRevalidate,
+  id: 'layout' as const,
+};
+
+</passage><passage file_path=src/modules/generateCommitMessage.ts>
+export async function generateCommitMessage(easyCodeClient: EasyCodeClient){
+
+    const gitExtension = vscode.extensions.getExtension('vscode.git');
+
+    const git = gitExtension?.exports.getAPI(1);
+
+    let workspaceFolders = vscode.workspace.workspaceFolders;
+    if (workspaceFolders){
+
+</passage><passage file_path=src/modules/generateCommitMessage.ts>
+            let generateCommitMessageUserMessage: EasyCodeChatMessage = {
+                role: 'user',
+                content: allFileDiffs + '\n\nBased on the above file diffs, write a commit message.',
+            };
+
+            let messages = [generateCommitMessageSystemMessage, generateCommitMessageUserMessage];
+            let model = Globals.getSettings().model;
+			try {
+				for await (const data of easyCodeClient.submitChatMessage({ model: model ? model : "gpt-4", messages: messages})) {
+					//console.log(data);
+					streamingCommitMessageResponse += data;
+                    // Set the commit message
+                    if (repo.inputBox) {
+                        repo.inputBox.value = streamingCommitMessageResponse;
+                    }
+				}
+			} catch (error:any) {
+				if (error != 'STOPSIGNAL' && error != 'User Stopped Streaming'){
+					console.log(error);
+				}
+				if (error == 'STOPSIGNAL'){
+					//messageComplete = true;
+				}
+			}
+    }
+
+</passage><passage file_path=src/webview/components/EditorContextMenuListener.tsx>
+        case 'fixIssue':
+          console.log(message.data);
+          dispatch(webviewToExtensionApi.endpoints.addTab.initiate()).then(result => {
+            if ('data' in result){
+              let newTabId = result?.data.newTabId;
+              dispatch(inputText.actions.setInputText({text: 'Code Context:\n\n' + message.data.codeContext + '\n\nErroring Text:\n\n' + message.data.errorTextPortion + '\n\nError Message:\n\n' + message.data.errorMessage, tabId: newTabId}));
+            }
+          })
+          break;
+      }
+
+</passage><passage file_path=src/webview/redux/uiActions.ts>
+export const followUpInputText = {
+  reducer: followUpInputTextSlice.reducer,
+  actions: followUpInputTextSlice.actions,
+}
+
+// Export as an object
+export const askCodebaseChecked = {
+  reducer: askCodebaseCheckboxSlice.reducer,
+  actions: askCodebaseCheckboxSlice.actions,
+};
+
+// Export as an object
+export const askWebChecked = {
+  reducer: askWebCheckboxSlice.reducer,
+  actions: askWebCheckboxSlice.actions,
+};
+
+</passage><passage file_path=src/chat/chats/baseChat.ts>
+    ) {
+        this.type = type;
+        this.phases = phases.map(phase => {
+            if (phase.type == ChatPhaseType.normal){
+				return new BasePhase(phase);
+			} else if (phase.type == ChatPhaseType.diff){
+				return new DiffPhase(phase as DiffPhase);
+			} else if (phase.type == ChatPhaseType.twoStepCodebasePlanning){
+				return new TwoStepCodebasePlanningPhase(phase as TwoStepCodebasePlanningPhase);
+			} else if (phase.type == ChatPhaseType.twoStepCodebaseImplementation){
+                return new TwoStepCodebaseImplementationPhase(phase as TwoStepCodebaseImplementationPhase);
+            } else if (phase.type == ChatPhaseType.codebaseImplementation){
+                return new CodebaseImplementationPhase(phase as CodebaseImplementationPhase);
+            } else if (phase.type == ChatPhaseType.codebaseDiffImplementation){
+                return new CodebaseDiffImplementationPhase(phase as CodebaseDiffImplementationPhase);
+            } else {
+                return phase;
+            }
+        }); // Deep copy of phases
+
+</passage><passage file_path=src/chat/phases/askCodebasePhase.ts>
+
+import DefaultAskCodebaseAgent from "../agents/defaultAskCodebaseAgent";
+import BasePhase from "./basePhase";
+
+export class AskCodebasePhase extends BasePhase {
+    constructor(
+        {
+			agents = [new DefaultAskCodebaseAgent()],
+		}: Partial<BasePhase> = {}
+    ) {
+        super({agents: agents});
+    }
+}
+
+export default AskCodebasePhase;
+
+</passage><passage file_path=src/webview/tsconfig.json>
+{
+	"experimentalDecorators": true,
+	"emitDecoratorMetadata": true,
+	"compilerOptions": {
+		"module": "ESNext",
+		"esModuleInterop": true,
+		"target": "ESNext",
+		"lib": [
+			"ESNext",
+			"DOM",
+			"DOM.Iterable"
+		],
+		"jsx": "react-jsx",
+		"moduleResolution": "bundler",
+		"isolatedModules": true,
+		"rootDir": "..",
+		"sourceMap": true,
+		"strict": true,
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"noFallthroughCasesInSwitch": true,
+	},
+}
+
+</passage><passage file_path=src/types/agents.ts>
+import { EasyCodeClient, SelectedCodebaseContent } from "../apis/extensionToServerApi";
+import { OpenAIClient } from "../apis/openaiClient";
+import { AgentLLMChatMessage, EasyCodeChatMessage } from "./chatMessage";
+
+export enum ChatAgentType{
+    default,
+    diff,
+    askCodebase,
+    askWeb,
+    codebaseTwoStepPlanning,
+    codebaseTwoStepImplementation,
+    codebaseCallGraph,
+    codebaseExplain,
+    codebaseDiffImplementation,
+    codebaseImplementation,
+    codeFeedback,
+    readFileContent
+  }
+
+export interface Agent {
+    type: ChatAgentType;
+    systemMessage: string;
+    firstMessagePromptPre: string;
+    firstMessagePromptPost: string;
+    followUpMessagePromptPre: string;
+    followUpMessagePromptPost: string;
+    shouldRetrieveInFollowUps: boolean;
+    llmChatHistory: AgentLLMChatMessage[];
+    createChatMessages: (messages: EasyCodeChatMessage[], model?: string) => Promise<void>;
+    submitChatMessage: (model:string) => AsyncGenerator<any, any, any>
+}
+
+</passage><passage file_path=src/webview/pages/components/AccountModal.tsx>
+import { Button, Modal, ModalContent, ModalHeader, ModalBody, ModalFooter} from '@nextui-org/react';
+import { EasyCodeUser } from '../../../apis/extensionToServerApi';
+import { IoBatteryHalf, IoPersonOutline, IoRocketOutline } from 'react-icons/io5';
+
+interface AccountModalProps {
+  isOpen: boolean;
+  userProfile: EasyCodeUser;
+  setIsUpgradeModalOpen: any;
+  onClose: () => void;
+}
+
+export default function AccountModal({ isOpen, userProfile, setIsUpgradeModalOpen, onClose }: AccountModalProps) {
+    console.log(userProfile);
+    return (
+    <Modal radius="sm" backdrop={"blur"} size={"lg"} placement={"center"}isOpen={isOpen} onClose={onClose}>
+      <ModalContent>
+        <ModalHeader className="flex flex-col gap-1">Your Account Info</ModalHeader>
+        <ModalBody>
+            <div className="flex flex-row"><IoPersonOutline className="h-6 w-6 mr-2" /><span className='text-md'>{'Email: ' + (userProfile?.isPlaceholderAccount == true ? 'Trial Account' : userProfile?.userEmail)}</span></div>
+            <p>
+              <div className="flex flex-row"><IoBatteryHalf className="h-6 w-6 mr-2" /><span className='text-md'>Rate Limits:</span></div>
+
+</passage><passage file_path=src/webview/redux/uiActions.ts>
+// src/webview/redux/uiActions.ts
+
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+
+interface InputTextState {
+    text: string;
+    tabId: string | null;
+    isLoading: boolean;
+    error: any;
+}
+
+interface InputTextPayload {
+    text: string;
+    tabId: string;
+}
+
+const initialInputTextState: InputTextState = {
+    text: '',
+    tabId: null,
+    isLoading: false,
+    error: null,
+};
+
+const inputTextSlice = createSlice({
+    name: 'inputText',
+    initialState: initialInputTextState,
+    reducers: {
+      setInputText: (state, action: PayloadAction<InputTextPayload>) => {
+        state.text = action.payload.text;
+        state.tabId = action.payload.tabId;
+      },
+      // other reducers...
+    },
+});
+
+const followUpInputTextSlice = createSlice({
+
+</passage><passage file_path=src/helpers/prompt.ts>
+	/*
+	This used to be needed with the old code running UI, but is no longer necessary and offers
+	more flexibility in switching between languages without locking gpt into the same language
+	*/
+
+	/*
+	if (codeEvalLang in codeEvalExampleScript) {
+		messageHistory.push(
+			{
+				role: 'assistant',
+				// https://github.com/openai/openai-node/issues/195
+				// @ts-ignore
+				content: null,
+				function_call: {
+					name: codeEvalLang,
+					arguments: JSON.stringify({ script: codeEvalExampleScript[codeEvalLang] }),
+				},
+			}
+		);
+	}*/
+};
+
+</passage><passage file_path=src/chat/agents/codebaseTwoStepPlanningAgent.ts>
+        }: Partial<DefaultAskCodebaseAgent> = {}
+    ) {
+        super({type, systemMessage, firstMessagePromptPre, firstMessagePromptPost, followUpMessagePromptPre, followUpMessagePromptPost, shouldRetrieveInFollowUps, llmChatHistory, selectedCodebaseContent})
+    }
+
+</passage><passage file_path=src/modules/generateCommitMessage.ts>
+    if (workspaceFolders){
+
+        // Get the current workspace
+        const workspace = workspaceFolders[0];
+
+        // Get the Git repository
+        const repo = git.getRepository(workspace.uri);
+
+        const changes = repo.repository.indexGroup.resourceStates;
+
+        // Get the diff of all the changes
+
+        let allFileDiffs = "";
+
+        if (!changes || changes.length == 0){
+            await vscode.window.showErrorMessage('Please stage some changes first.');
+            return;
+        }
+        for (const change of changes) {
+            const resourceUri = change.resourceUri;
+            const diff = await repo.diffIndexWithHEAD(resourceUri.fsPath);
+            allFileDiffs += diff;
+        }
+
+        let streamingCommitMessageResponse = '';
+            let generateCommitMessageSystemMessage: EasyCodeChatMessage = {
+
+</passage><passage file_path=src/modules/codeLensProvider.ts>
+import vscode from "vscode";
+import type { CodeLens, CodeLensProvider, DocumentSymbol, SymbolInformation, ProviderResult, Uri } from "vscode";
+
+const isCodeLensEnabled = () => (
+    vscode.workspace.getConfiguration('easycode').get<boolean>('codeLens', true)
+);
+
+const findSymbols = async (uri: Uri): Promise<DocumentSymbol[] | null> => {
+    const symbols =
+        await vscode.commands.executeCommand<ProviderResult<SymbolInformation[] | DocumentSymbol[]>>('vscode.executeDocumentSymbolProvider', uri);
+    if (!Array.isArray(symbols) || !('range' in symbols[0])) {
+        return null;
+    }
+
+    return symbols as DocumentSymbol[];
+};
+
+export const createCodeLensProvider = (): CodeLensProvider => ({
+
+</passage><passage file_path=src/helpers/tokenCounters.ts>
+/**
+ * Estimate input token usage for each function definition
+ * The estimation will be off by a few tokens from the actual usage.
+ * There is no official documentation on how function definitions should be counted,
+ * see https://github.com/openai/openai-cookbook/issues/500
+ */
+
+export function countFunctionDefinitionTokens(functions: ReadonlyArray<ChatCompletionFunctions>) {
+    return functions.reduce((agg, curr) => agg + enc.encode(JSON.stringify(curr)).length, 0);
+}
+
+export function countMessageHistoryTokens(messageHistory: ChatCompletionRequestMessage[], functions: ReadonlyArray<ChatCompletionFunctions>) {
+    const msgTokenCount = messageHistory.reduce((agg, curr) => agg + countMessageTokens(curr), 0);
+    const funcTokenCount = countFunctionDefinitionTokens(functions);
+
+    return msgTokenCount + funcTokenCount;
+}
+
+</passage><passage file_path=src/chat/agents/askWebAgent.ts>
+import { Agent, ChatAgentType } from "../../types/agents";
+import { AgentLLMChatMessage } from "../../types/chatMessage"
+import BaseAgent from "./baseAgent";
+
+export class AskWebAgent extends BaseAgent {
+
+    constructor(
+        public type: ChatAgentType = ChatAgentType.askWeb,
+        public systemMessage: string = "You are an AI coding assistant.",
+        public firstMessagePromptPre: string = "Based on the text above, ",
+        public firstMessagePromptPost: string = "",
+        public followUpMessagePromptPre: string = "",
+        public followUpMessagePromptPost: string = "",
+        public shouldRetrieveInFollowUps: boolean = true,
+        public llmChatHistory: AgentLLMChatMessage[] = []
+    ) {
+        super();
+    }
+}
+
+export default AskWebAgent;
+
+</passage><passage file_path=src/webview/pages/components/Signup.tsx>
+          isLoading={navigation.state !== 'idle'}
+        >
+          Sign Up
+        </Button>
+
+        {(data && 'error' in data) && (
+          <div className="text-danger">{data.error?.message}</div>
+        )}
+
+      </div>
+    </Form>
+    </div>
+  );
+}
+
+</passage><passage file_path=src/chat/agents/readFileContentAgent.ts>
+        for (let f = 0; f < filePaths.length; f++){
+            let cleanedFilePath = filePaths[f].replace('`', '');
+            for (let i = 0; i < this.selectedCodebaseContent.selectedChunkFileNames.length; i++){
+                let selectedChunkFilePath = this.selectedCodebaseContent.selectedChunkFileNames[i];
+                if (selectedChunkFilePath.includes(cleanedFilePath)){
+                    let fileUri = vscode.Uri.joinPath(vscode.Uri.file(this.selectedCodebaseContent.selectedChunkRootIdentifiers[i]), selectedChunkFilePath);
+                    let data = await vscode.workspace.fs.readFile(fileUri);
+                    return data.toString();
+                }
+            }
+        }
+
+        throw 'file path not in selected codebase chunks';
+
+    }
+
+</passage><passage file_path=src/webview/vscode.ts>
+import type { ValidWebviewMessage } from '../types/webviewToExtensionTypes';
+import type { WebviewApi } from 'vscode-webview';
+
+const vscode: WebviewApi<never> = acquireVsCodeApi();
+
+export interface AppWebviewApi {
+  postMessage(message: ValidWebviewMessage): void;
+}
+
+export default {
+  postMessage(message) {
+    vscode.postMessage(message);
+  },
+} satisfies AppWebviewApi as AppWebviewApi;
+
+</passage><passage file_path=src/helpers/githubCodebaseIndex.ts>
+export const createCacheGhRepoTask = ({
+    context,
+    owner,
+    name,
+    ref,
+}: {
+    context: ExtensionContext,
+    owner: string,
+    name: string,
+    ref: string,
+}): (progress: Progress<{ message?: string, increment?: number }>) => Promise<string> => {
+
+</passage><passage file_path=src/chat/agents/diffAgent.ts>
+import { ChatAgentType } from "../../types/agents";
+import BaseAgent from "./baseAgent";
+import { search_and_replace_schema } from "./function_schemas/function_schemas";
+
+export class DiffAgent extends BaseAgent {
+
+</passage><passage file_path=src/webview/pages/components/ChatLayout.tsx>
+import { Select, SelectItem, Selection } from '@nextui-org/react';
+import { useCallback, useContext, useEffect, useRef } from 'react';
+import { Outlet, useNavigate, useParams } from 'react-router-dom';
+//import { useAppLoaderData } from '../../hooks';
+import { webviewToExtensionApi, useGetMessageHistoryListQuery } from '../../redux/webviewToExtensionApi';
+import { store } from '../../redux/store';
+import ChatHistoryMenuItemContext, { ChatHistoryMenuItemConsumer } from '../../components/ChatHistoryMenuItemContext';
+import { UilTrash } from '@iconscout/react-unicons'
+import { IoTrashOutline } from 'react-icons/io5';
+
+export default function ChatLayout() {
+  const {historyMenuButtonRef: historyMenuButtonRef, isHistoryMenuOpen: isHistoryMenuOpen, setHistoryMenuOpen: setHistoryMenuOpen } = useContext(ChatHistoryMenuItemContext);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const { data } = useGetMessageHistoryListQuery(undefined, { skip: false});
+  //console.log(data);
+  const { tabId } = useParams<'tabId'>();
+
+</passage><passage file_path=src/webview/pages/data/chatTab.ts>
+};
+
+export default {
+  Component: ChatTab,
+  loader,
+  action,
+};
+
+</passage><passage file_path=src/helpers/githubCodebaseIndex.ts>
+}): (progress: Progress<{ message?: string, increment?: number }>) => Promise<string> => {
+    return async (progress) => {
+        let commit: string | undefined | null = context.workspaceState.get<string>(getGhCommitCacheKey({ owner, name, ref }));
+
+        if (!commit) {
+            progress.report({ message: 'Fetching repository metadata' });
+
+            // the ref could be a fully specified ref, a branch, or a tag
+            const refsToTry = [ref, `heads/${ref}`, `tags/${ref}`];
+            while (!commit && refsToTry.length) {
+                commit = await fetchRefHash({ owner, name, fullRef: refsToTry.shift()! });
+            }
+
+            if (!commit) {
+                throw new Error(`Cannot find ${ref} in ${owner}/${name}`);
+            }
+
+            await context.workspaceState.update(getGhCommitCacheKey({ owner, name, ref }), commit);
+        }
+
+        if (await validateGhRepoCache( { context, commit })) {
+            // repo already cached
+            return commit;
+        }
+
+        progress.report({ message: 'Downloading repository' });
+        await cacheGhRepo({ context, owner, name, commit });
+        await context.globalState.update(getGhRepoCacheKey({ commit }), true);
+
+</passage><passage file_path=src/modules/codeActionsProvider.ts>
+    private createCodeAction(document: TextDocument, diagnostic: Diagnostic): CodeAction {
+        const action = new CodeAction(`Fix with EasyCode: ${diagnostic.message}`, CodeActionKind.QuickFix);
+        action.diagnostics = [diagnostic];
+        action.isPreferred = true;
+
+        // Calculate the expanded range to include three lines above and below the diagnostic's range
+        const expandedRange = this.getExpandedRange(document, diagnostic.range);
+
+        // Define the command that the code action will invoke
+        const command: Command = {
+            title: 'Fix Issue',
+            command: 'easycode.fixIssue', // Replace with your actual command
+            arguments: [document.uri, diagnostic.range, expandedRange, diagnostic]
+        };
+
+        action.command = command;
+
+        return action;
+    }
+
+    private getExpandedRange(document: TextDocument, range: Range): Range {
+
+</passage><passage file_path=src/chat/chats/askWebChat.ts>
+import { ChatType } from "../../types/chat";
+import BaseChat from "./baseChat";
+import AskWebPhase from "../phases/askWebPhase";
+
+
+export class AskWebChat extends BaseChat {
+
+    constructor(
+        {
+            type = ChatType.askCodebase,
+            phases = [new AskWebPhase()],
+            currentPhaseIndex = 0,
+            title = ''
+        }: Partial<AskWebChat> = {}
+    ) {
+        super({ type, phases, currentPhaseIndex, title });
+    }
+}
+
+export default AskWebChat;
+
+</passage><passage file_path=src/webview/pages/components/Signup.tsx>
+    <div>
+    <Form replace method="POST">
+      <div className="flex flex-col gap-y-4 items-start px-6 w-64">
+        <Input
+          variant='bordered'
+          name="email"
+          type="email"
+          label="Email"
+          value={email}
+          onValueChange={(value: string) => { setEmail(value); }}
+        />
+        <Input
+          variant='bordered'
+          name="password"
+          type="password"
+          label="Password"
+          value={password}
+          onValueChange={(value: string) => { setPassword(value); }}
+        />
+        <Input
+          variant='bordered'
+          name="passwordConfirm"
+          type="password"
+          label="Confirm Password"
+          value={passwordConfirm}
+          onValueChange={(value: string) => { setPasswordConfirm(value); }}
+        />
+        {/* this is used to hold the value for the form post */}
+
+</passage><passage file_path=src/helpers/dataCollection.ts>
+import { Globals } from "../config/globals";
+
+
+function splitStringIntoChunks(str: string, chunkSize: number) {
+    const chunks = [];
+    for (let i = 0; i < str.length; i += chunkSize) {
+        chunks.push(str.slice(i, i + chunkSize));
+    }
+    return chunks;
+}
+
+export function createDataCollectionLogObject(stringifiedMessageHistory: string, model?: string, feedback?: string) {
+
+</passage><passage file_path=src/webview/components/ExternalLink.tsx>
+import { useMemo } from 'react';
+import { CommandLink } from './';
+import type { ReactNode } from 'react';
+
+export interface ExternalLinkProps {
+  url: URL;
+  children?: ReactNode;
+}
+
+export default function ExternalLink({ url, children }: ExternalLinkProps) {
+  const args = useMemo(() => ({
+    scheme: url.protocol.substring(0, url.protocol.length - 1),
+    authority: url.host,
+    path: url.pathname,
+    ...(url.search.length ? { query: url.search } : {}),
+    ...(url.hash.length ? { fragment: url.hash } : {}),
+  }), [url]);
+
+  return (
+    <CommandLink showAnchorIcon command="vscode.open" args={args}>
+      {children}
+    </CommandLink>
+  );
+}
+
+</passage><passage file_path=src/webview/redux/uiActions.ts>
+const followUpInputTextSlice = createSlice({
+  name: 'inputText',
+  initialState: initialInputTextState,
+  reducers: {
+    setFollowUpInputText: (state, action: PayloadAction<InputTextPayload>) => {
+      state.text = action.payload.text;
+      state.tabId = action.payload.tabId;
+    },
+    // other reducers...
+  },
+});
+
+const askCodebaseCheckboxSlice = createSlice({
+  name: 'askCodebaseCheckbox',
+  initialState: false,
+  reducers: {
+    setAskCodebaseCheckbox: (state, action: PayloadAction<boolean>) => {
+      state = action.payload;
+    },
+    // other reducers...
+  },
+});
+
+const askWebCheckboxSlice = createSlice({
+  name: 'askWebCheckbox',
+  initialState: false,
+  reducers: {
+    setAskCodebaseCheckbox: (state, action: PayloadAction<boolean>) => {
+      state = action.payload;
+    },
+    // other reducers...
+  },
+});
+
+// Export as an object
+export const inputText = {
+  reducer: inputTextSlice.reducer,
+  actions: inputTextSlice.actions,
+};
+
+export const followUpInputText = {
+
+</passage><passage file_path=src/chat/phases/defaultPhase.ts>
+import BasePhase from "./basePhase";
+
+export class DefaultPhase extends BasePhase {
+
+}
+
+export default DefaultPhase;
+
+</passage><passage file_path=src/helpers/chatHistory.ts>
+        if (
+            ((truncatedHistoryLength - msgLength) >= targetLength)
+            || (msg.role !== 'user')
+            || (!msg.content?.length)
+            || ((truncatedHistoryLength - encodeString(msg.content).length) >= targetLength)
+        ) {
+            // remove the entire message if
+            // 1. Removing this message partially doesn't achieve the target prompt length
+            // 2. This message is not a user message
+            // 3. This message is empty
+            // 4. Removing this message's entire content doesn't achieve the target prompt length, i.e. token_budget <= msg_overhead
+
+            truncatedHistoryLength -= msgLength;
+        } else {
+
+</passage><passage file_path=src/helpers/tokenCounters.ts>
+import { get_encoding } from '@dqbd/tiktoken';
+import { ChatCompletionFunctions, ChatCompletionRequestMessage } from 'openai';
+import { Globals } from '../config/globals';
+
+const enc = get_encoding("cl100k_base");
+
+export function encodeString(string: string){
+    return enc.encode(string);
+}
+
+export function decodeToString(encodedString: Uint32Array){
+    return enc.decode(encodedString);
+}
+
+export function calcMaxAvailableTokens(model: string){
+
+</passage><passage file_path=src/helpers/githubCodebaseIndex.ts>
+import stream from "node:stream";
+
+import vscode from "vscode";
+import fetch from "node-fetch";
+import tar from "tar";
+
+import type { ExtensionContext, Progress } from "vscode";
+
+const GITHUB_API = 'https://api.github.com';
+
+export const getGhCommitCacheKey = ({ owner, name, ref }: { owner: string, name: string, ref: string }) => {
+    const encodedOwner = encodeURIComponent(owner);
+    const encodedName = encodeURIComponent(name);
+    const encodedRef = encodeURIComponent(ref);
+    return `gh-hash-${encodedOwner}-${encodedName}-${encodedRef}`;
+};
+
+const getGhRepoCacheKey = ({ commit }: { commit: string }) => `gh-cache-${commit}`;
+
+export const getGhRepoCachePath = ({ context, commit }: { context: ExtensionContext, commit: string }) => (
+    vscode.Uri.joinPath(context.globalStorageUri, 'gh', commit)
+);
+
+export const getGhRepoRootIdentifier = ({ commit }: { commit: string }) => `git-${commit}:`;
+
+const fetchRefHash = async ({ owner, name, fullRef }: { owner: string, name: string, fullRef: string }) => {
+
+</passage><passage file_path=src/webview/routes/types.ts>
+import type { ExtensionToWebviewMessage } from '../../types/webviewToExtensionTypes';
+import type { ExtensionApiEndpoint, webviewToExtensionApi } from '../redux/webviewToExtensionApi';
+import type { SerializedError } from '@reduxjs/toolkit';
+
+export interface DataOrError<T extends ExtensionApiEndpoint> {
+  data?: Partial<(typeof webviewToExtensionApi.endpoints)[T]['Types']['ResultType']>;
+  error?: ExtensionToWebviewMessage['error'] | SerializedError;
+}
+
+export type JsonType<T extends ExtensionApiEndpoint> = {
+  [endpoint in T]?: DataOrError<T>;
+};
+
+</passage><passage file_path=src/webview/pages/components/AccountModal.tsx>
+              <div className="flex flex-row"><IoBatteryHalf className="h-6 w-6 mr-2" /><span className='text-md'>Rate Limits:</span></div>
+            </p>
+            <li className="ml-3">
+              {'GPT-4: '}
+              {((userProfile?.gpt4TokensTotal && userProfile?.gpt4TokensUsed && (userProfile.gpt4TokensTotal > userProfile.gpt4TokensUsed)) ? (userProfile?.gpt4TokensTotal - userProfile?.gpt4TokensUsed + ' tokens remaining') : '5 requests every 4 hours')}
+            </li>
+            <li className="ml-3">
+              {'GPT-3 / Claude: ' + (userProfile?.subscribed ? "Unlimited" : '10 requests every 20 minutes')}
+            </li>
+            <li className="ml-3">
+              {'Ask Codebase: ' + (userProfile?.subscribedCodebase ? "Unlimited" : '20 requests every month')}
+            </li>
+            <Button className="mt-4" radius='sm' color='primary' variant='shadow' onClick={(e:any) => setIsUpgradeModalOpen(true)}>
+              <IoRocketOutline className="w-6 h-6" />Upgrade
+
+</passage><passage file_path=src/helpers/dataCollection.ts>
+export function createDataCollectionLogObject(stringifiedMessageHistory: string, model?: string, feedback?: string) {
+    let logObject = {
+      model: model ?? Globals.getSettings().model,
+      feedback: feedback || "",
+      chatString1: "",
+      chatString2: "",
+      chatString3: "",
+      chatString4: "",
+      chatString5: "",
+      chatString6: "",
+      chatString7: "",
+      chatString8: "",
+  };
+
+  let stringifiedMessageHistoryChunks = splitStringIntoChunks(stringifiedMessageHistory, 32000);
+  //really really stupid manual way of assigning fields due to logging object limitations
+  stringifiedMessageHistoryChunks.forEach((chunk:string, index:number) => {
+
+</passage><passage file_path=src/chat/phases/askWebPhase.ts>
+import AskWebAgent from "../agents/askWebAgent";
+import { Agent } from "../../types/agents";
+import BasePhase from "./basePhase";
+
+export class AskWebPhase extends BasePhase {
+    constructor(
+        public agents: Agent[] = [new AskWebAgent()],
+        public agentIndex: number = 0,
+        public agentIterationsLeft: number = 1,
+    ) {
+        super();
+    }
+}
+
+export default AskWebPhase;
+
+</passage><passage file_path=walkthroughs/autocomplete.md>
+## Auto Complete
+
+<img src="https://storage.googleapis.com/easycode-assets/autocomplete.gif" alt="Auto Complete">
+
+Write code or comment, press `SHIFT + TAB` and EasyCode will suggest the next few lines of code for you. Accept with `Enter` or `TAB`. Press `Escape` to cancel. 
+</passage><passage file_path=src/webview/pages/components/ChatLayout.tsx>
+  useEffect(() => {
+    console.log("attempt to get messageHistory");
+    if (data?.messageHistory.length && data?.messageHistory[data?.messageHistory.length-1].id != prevLastTabId.current) {
+      let newTabId = data?.messageHistory[data?.messageHistory.length-1].id;
+      navigate(`${newTabId}`);
+      console.log("messageHistory");
+      console.log(data?.messageHistory);
+      //scrollToRight();
+    }
+    prevLastTabId.current = data?.messageHistory[data?.messageHistory.length-1]?.id;
+    console.log("prevDataLength");
+    console.log(prevLastTabId.current);
+  }, [data]);
+
+
+
+  const handleClickOutside = (event:any) => {
+    //console.log("handling click");
+    if (selectRef.current && !selectRef.current.contains(event.target) && historyMenuButtonRef.current && !historyMenuButtonRef.current.contains(event.target)) {
+      console.log(historyMenuButtonRef);
+      setHistoryMenuOpen(false);
+    }
+  };
+
+  // Call scrollToRight after the first render
+  useEffect(() => {
+
+</passage><passage file_path=src/types/chatMessage.ts>
+import { SelectedCodebaseContent } from '../apis/extensionToServerApi';
+import { ChatCompletionRequestMessage } from 'openai';
+import { Agent, ChatAgentType } from './agents';
+
+export interface EasyCodeChatMessage extends ChatCompletionRequestMessage {
+    messageIndex?: number;
+    easyCodeMetadata?: {
+      model?: string,
+      modelType?: string,
+      feedback?: 'positive' | 'negative',
+      isMessageComplete?: boolean,
+      useOwnApiKey?: boolean,
+      isAskCodebase?: boolean,
+      isAskWeb?: boolean,
+      useActiveViewContext?: boolean,
+      promptRevised?: boolean,
+      selectedCodebaseContent?: SelectedCodebaseContent,
+      origUserQuery?: string;
+      agentType?: ChatAgentType;
+      finishedStreaming?: boolean;
+    };
+  }
+
+  export interface UserAgentChatMessage extends ChatCompletionRequestMessage {
+
+</passage><passage file_path=src/webview/redux/error.ts>
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+
+const errorState = {
+  error: false,
+  message: ''
+};
+
+const errorModalSlice = createSlice({
+  name: 'errorModal',
+  initialState: errorState,
+  reducers: {
+    showError: (state, action: PayloadAction<string>) => {
+      state.error = true;
+      state.message = action.payload;
+      return state;
+    },
+    clearError: (state) => {
+      state.error = false;
+      state.message = '';
+      return state;
+    },
+    // other reducers...
+  },
+});
+
+// Export as an object
+export const errorModal = {
+  reducer: errorModalSlice.reducer,
+  actions: errorModalSlice.actions,
+};
+
+</passage><passage file_path=src/helpers/fileNodeUtils.ts>
+export function processFilesToNestedStructure(files: vscode.Uri[], nodeSelectedMap: Map<string, boolean>) {
+    let root = createFileNode('', false);
+
+    for (const file of files) {
+        let current = root;
+        const filePathComponents = file.path.split('/');
+
+        for (const [index, component] of filePathComponents.entries()) {
+        let childNode = current.children.find((child: any) => child.name === component);
+
+        if (!childNode) {
+            let selected = false;
+            if (nodeSelectedMap.has(`${current.path}/${component}`)) {
+                selected = true;
+            }
+            childNode = createFileNode(component, selected, current.path);
+            current.children.push(childNode);
+        }
+
+        if (index === filePathComponents.length - 1) {
+            childNode.isFile = true;
+        }
+
+        current = childNode;
+        }
+    }
+
+    return root.children;
+}
+
+export function countSelectedFiles(fileNode: any): number {
+
+</passage><passage file_path=src/helpers/fileNodeUtils.ts>
+import * as vscode from 'vscode';
+import type { FileTreeNode } from '../types/types';
+
+
+export function createFileNode(filePath: string, selected: boolean, parentPath: string = ''): FileTreeNode {
+		return {
+			name: filePath,
+			path: parentPath ? `${parentPath}/${filePath}` : filePath,
+			children: [],
+			selected: selected,
+		};
+	}
+
+export function addAllFilesToNodeSelectedMap(allFiles: vscode.Uri[], nodeSelectedMap: Map<string, boolean>) {
+
+    for (const file of allFiles){
+        let filePath = file.path;
+        if (file.path.at(0) == '/')
+            filePath = filePath.substring(1);
+        nodeSelectedMap.set(filePath, true);
+    }
+    return nodeSelectedMap;
+}
+
+export function processFilesToNestedStructure(files: vscode.Uri[], nodeSelectedMap: Map<string, boolean>) {
+
+</passage><passage file_path=src/webview/pages/components/Login.tsx>
+import { Button, Input } from '@nextui-org/react';
+import { useState } from 'react';
+import { Form, useNavigation } from 'react-router-dom';
+import { useAppActionData } from '../../hooks';
+
+export default function Login() {
+
+</passage><passage file_path=src/modules/codeLensProvider.ts>
+export const createCodeLensProvider = (): CodeLensProvider => ({
+    async provideCodeLenses({ uri }, _token) {
+        if (!isCodeLensEnabled()) {
+            return null;
+        }
+
+        const symbols = await findSymbols(uri);
+        if (!symbols?.length) {
+            return null;
+        }
+
+        const lenses: CodeLens[] = [];
+        const findLenses = (symbols: DocumentSymbol[]) => {
+
+</passage><passage file_path=src/chat/chats/defaultChat.ts>
+import BaseChat from "./baseChat";
+
+export class DefaultChat extends BaseChat {
+    constructor(
+        params: Partial<DefaultChat> = {}
+    ) {
+        super(params);
+    }
+}
+
+export default DefaultChat;
+
+</passage><passage file_path=src/chat/agents/defaultAgent.ts>
+import { Agent, ChatAgentType } from "../../types/agents";
+import { AgentLLMChatMessage } from "../../types/chatMessage"
+import BaseAgent from "./baseAgent";
+
+export class DefaultAgent extends BaseAgent {
+
+}
+
+export default DefaultAgent;
+
+</passage><passage file_path=src/config/tailwind-nextui-theme.ts>
+    mytheme: {
+      // custom theme
+      extend: "dark",
+      colors: {
+        primary: {
+          DEFAULT: "#BEF264",
+          foreground: "#000000",
+        },
+        focus: "#BEF264",
+      },
+    },
+  }
+
+</passage><passage file_path=src/chat/agents/codebaseExplainAgent.ts>
+import { Agent, ChatAgentType } from "../../types/agents";
+import { AgentLLMChatMessage } from "../../types/chatMessage";
+import BaseAgent from "./baseAgent";
+import DefaultAskCodebaseAgent from "./defaultAskCodebaseAgent";
+
+
+export class CodebaseExplainAgent extends DefaultAskCodebaseAgent {
+
+</passage><passage file_path=src/webview/pages/components/FileTree.tsx>
+          className="ml-0 my-0 px-0 py-0" 
+          startContent={<Checkbox className="pl-1 my-0 py-0" key={node.path} value={node.path} isSelected={node.selected} onChange={(event) => handleCheckboxChange(event, node)}>{node.name}</Checkbox>}>
+            <div className="ml-12 my-0 py-0 flex flex-col">
+            {node.children?.map(childNode => (
+                <FileTree key={childNode.path} node={childNode} isRoot={false} onCheckboxChange={onCheckboxChange}/>
+            ))}
+            </div>
+        </AccordionItem>
+    </Accordion>
+  );
+};
+
+</passage><passage file_path=src/webview/pages/components/AccountModal.tsx>
+              <IoRocketOutline className="w-6 h-6" />Upgrade
+            </Button>
+        </ModalBody>
+        <ModalFooter>
+            <Button color="danger" variant="light" onClick={onClose}>
+                Close
+            </Button>
+          </ModalFooter>
+      </ModalContent>
+    </Modal>
+  );
+}
+
+</passage><passage file_path=src/webview/components/ChatHistoryMenuItemContext.tsx>
+import React, { Dispatch, RefObject, SetStateAction } from 'react';
+
+const ChatHistoryMenuItemContext = React.createContext({
+    isHistoryMenuOpen: false,
+    setHistoryMenuOpen: (() => {}) as Dispatch<SetStateAction<boolean>>,
+    historyMenuButtonRef: React.createRef<HTMLDivElement>(),
+  });
+
+export const ChatHistoryMenuItemProvider = ChatHistoryMenuItemContext.Provider;
+export const ChatHistoryMenuItemConsumer = ChatHistoryMenuItemContext.Consumer;
+
+export default ChatHistoryMenuItemContext;
+
+</passage><passage file_path=src/helpers/dataCollection.ts>
+  stringifiedMessageHistoryChunks.forEach((chunk:string, index:number) => {
+      if (index == 0){
+          logObject.chatString1 = chunk;
+      } else if (index == 1){
+          logObject.chatString2 = chunk;
+      } else if (index == 2){
+          logObject.chatString3 = chunk;
+      } else if (index == 3){
+          logObject.chatString4 = chunk;
+      } else if (index == 4){
+          logObject.chatString5 = chunk;
+      } else if (index == 5){
+          logObject.chatString6 = chunk;
+      } else if (index == 6){
+          logObject.chatString7 = chunk;
+      } else if (index == 7){
+          logObject.chatString8 = chunk;
+      }
+    });
+
+    return logObject;
+  }
+
+</passage><passage file_path=src/sentry/easycodeSentryGlobal.ts>
+    ownKeys(target) {
+        return [...Reflect.ownKeys(target), ...Reflect.ownKeys(sentryStore)];
+    },
+});
+
+export default globalProxy;
+
+</passage><passage file_path=src/types/chatMessage.ts>
+  export interface AgentLLMChatMessage extends ChatCompletionRequestMessage {
+    easyCodeMetadata?: {
+      model?: string,
+      modelType?: string,
+      feedback?: 'positive' | 'negative',
+      isMessageComplete?: boolean,
+      useOwnApiKey?: boolean,
+      isAskCodebase?: boolean,
+      isAskWeb?: boolean,
+      useActiveViewContext?: boolean,
+      promptRevised?: boolean,
+      selectedCodebaseContent?: SelectedCodebaseContent,
+      origUserQuery?: string;
+      agentType?: ChatAgentType;
+      finishedStreaming?: boolean;
+    };
+  }
+
+</passage><passage file_path=src/modules/codeActionsProvider.ts>
+import vscode, { CodeAction, CodeActionProvider, CodeActionKind, Diagnostic, Range, TextDocument, CodeActionContext, CancellationToken, Command } from "vscode";
+
+const isCodeActionsEnabled = (): boolean => (
+    vscode.workspace.getConfiguration('easycode').get<boolean>('codeActions', true)
+);
+
+export class EasyCodeActionsProvider implements CodeActionProvider {
+
+</passage><passage file_path=src/webview/pages/components/ErrorModal.tsx>
+import { Button, Modal, ModalContent, ModalHeader, ModalBody, ModalFooter} from '@nextui-org/react';
+import { useAppDispatch } from '../../hooks';
+import { webviewToExtensionApi } from '../../redux/webviewToExtensionApi';
+import { EasyCodeUser } from '../../../apis/extensionToServerApi';
+import { IoCardOutline, IoRocketOutline } from 'react-icons/io5';
+
+interface ErrorModalProps {
+  isOpen: boolean;
+  errorMessage: string;
+  onClose: () => void;
+}
+
+export default function ErrorModal({ isOpen, errorMessage, onClose }: ErrorModalProps) {
+
+  return (
+    <Modal radius="sm" size={"lg"} placement={"center"} isOpen={isOpen} onClose={onClose}>
+
+</passage><passage file_path=src/webview/pages/components/ForgotPassword.tsx>
+import { Button, Input } from '@nextui-org/react';
+import { useState } from 'react';
+import { Form } from 'react-router-dom';
+import { useAppActionData } from '../../hooks';
+
+export default function ForgotPassword() {
+  const [email, setEmail] = useState('');
+
+  const data = useAppActionData<'forgotPassword'>()?.forgotPassword;
+  //console.log("data: ");
+  //console.log("data.data?.success: ", data?.data?.success);
+  return (
+    <Form replace method="POST">
+      <div className="flex flex-col gap-y-4 items-start px-6 w-64">
+        <Input
+          variant='bordered'
+          name="email"
+          type="email"
+          label="Email"
+          value={email}
+          onValueChange={(value: string) => { setEmail(value); }}
+        />
+
+        <Button type="submit" color="primary">Get Password Reset Link</Button>
+        {(data) && (
+          data.data?.success
+          ? <div className="text-success">Password Reset Email Sent.</div>
+          : <div className="text-danger">Failed to Send Password Reset Email.</div>
+
+</passage><passage file_path=src/helpers/prompt.ts>
+import { ChatCompletionRequestMessage } from "openai";
+import { Globals } from "../config/globals";
+import { Agent } from "../types/agents";
+
+
+function concatenateHistory(history: string[]) {
+	let historyTotal = '';
+	for (let i = 0; i < history.length; i++) {
+		historyTotal += history[i];
+	}
+		return historyTotal;
+	}
+
+const codeEvalExampleScript: Record<string, string> = {
+	bash: '\necho\n',
+	batch: '\necho\n',
+	java: '\nSystem.out.println();\n',
+	node: '\nconsole.log();\n',
+	python: '\nprint()\n',
+};
+
+function createPrompt(agent: Agent, question: string, model: string, selection?: string){
+
+</passage><passage file_path=src/helpers/tokenCounters.ts>
+export function calcMaxAvailableTokens(model: string){
+
+    let modelMaxAvailableToken = 0;
+    if (model == 'gpt-4') {
+        modelMaxAvailableToken = 8192;
+    } else if (model == 'gpt-4-32k'){
+        modelMaxAvailableToken = 32768;
+    } else if (model == 'gpt-4-1106-preview'){
+        modelMaxAvailableToken = 65536;
+    } else if (model == 'gpt-3.5-turbo-16k'){
+        modelMaxAvailableToken = 16384;
+    } else if (model == 'gpt-3.5-turbo') {
+        modelMaxAvailableToken = 4096;
+    } else if (model == 'claude-instant-1'){
+        modelMaxAvailableToken = 32768;
+    } else if (model == 'claude-2'){
+        modelMaxAvailableToken = 90000;
+    } else if (model == 'easycode-0.1'){
+        modelMaxAvailableToken = 3496;
+    }
+    let maxAvailableToken = (modelMaxAvailableToken - (Globals.getSettings().maxTokens || 1024) - 100);
+    return maxAvailableToken;
+}
+/**
+
+</passage><passage file_path=src/helpers/prompt.ts>
+function createPrompt(agent: Agent, question: string, model: string, selection?: string){
+	console.log(agent);
+	let messageHistory = [];
+	let systemMessageObject = { role: "system", content: agent.systemMessage} as ChatCompletionRequestMessage;
+	messageHistory.push(systemMessageObject);
+	let userMessageObject: ChatCompletionRequestMessage = { role: "user" };
+	let prompt = agent.firstMessagePromptPre + question + agent.firstMessagePromptPost;
+	//let prompt = ''
+	if (selection) {
+		// If there is a selection, add the prompt and the selected text to the search prompt
+		if (Globals.getSettings().selectedInsideCodeblock) {
+			userMessageObject.content = selection + '\n\n' + prompt;
+		} else {
+			userMessageObject.content = selection + '\n\n' + prompt;
+		}
+	} else {
+		// Otherwise, just use the prompt if user typed it
+		userMessageObject.content = prompt;
+	}
+	messageHistory.push(userMessageObject);
+	return messageHistory;
+	/*
+
+</passage><passage file_path=src/helpers/fileNodeUtils.ts>
+export function countSelectedFiles(fileNode: any): number {
+    let count = 0;
+
+    if (fileNode.children && fileNode.children.length > 0) {
+        for (const child of fileNode.children) {
+            count += countSelectedFiles(child);
+        }
+    } else {
+        count = 1;
+    }
+
+    return count;
+}
+
+// Helper function to collect all file nodes
+export function collectFileNodes(fileNodes: any[]): any[] {
+    let collectedNodes: any[] = [];
+
+    for (const fileNode of fileNodes) {
+        // If the fileNode has children, call collectFileNodes recursively
+        if (fileNode.children && fileNode.children.length > 0) {
+            collectedNodes.push(...collectFileNodes(fileNode.children));
+        } else {
+            collectedNodes.push(fileNode);
+        }
+    }
+
+    return collectedNodes;
+}
+
+</passage><passage file_path=src/types/chatMessage.ts>
+  export interface UserAgentChatMessage extends ChatCompletionRequestMessage {
+    easyCodeMetadata?: {
+      model?: string,
+      modelType?: string,
+      feedback?: 'positive' | 'negative',
+      isMessageComplete?: boolean,
+      useOwnApiKey?: boolean,
+      isAskCodebase?: boolean,
+      isAskWeb?: boolean,
+      useActiveViewContext?: boolean,
+      promptRevised?: boolean,
+      selectedCodebaseContent?: SelectedCodebaseContent,
+      origUserQuery?: string;
+      agentType?: ChatAgentType;
+      finishedStreaming?: boolean;
+    };
+  }
+
+  export interface AgentLLMChatMessage extends ChatCompletionRequestMessage {
+
+</passage><passage file_path=src/helpers/chatHistory.ts>
+        } else {
+            // otherwise, partially truncate this message
+
+            const tokensToRemove = truncatedHistoryLength - targetLength;
+            const tokens = encodeString(msg.content);
+            const truncatedTokens = tokens.subarray(tokensToRemove);
+
+            let newContent = new TextDecoder().decode(decodeToString(truncatedTokens));
+            const newContentTrimmed = newContent.trim();
+
+            let newContentLength = truncatedTokens.length;
+            const newContentTrimmedLength = encodeString(newContentTrimmed).length;
+
+            if (newContentTrimmedLength <= newContentLength) {
+                newContent = newContentTrimmed;
+                newContentLength = newContentTrimmedLength;
+            }
+
+            const tokensSaved = tokens.length - newContentLength;
+            truncatedHistoryLength -= tokensSaved;
+            truncatedHistory.push({
+
+</passage><passage file_path=src/config/tailwind-nextui-theme.ts>
+export const themes = {
+    light: {
+      colors: {
+        background: "#f3f3f4", // or DEFAULT
+        foreground: "#11181C", // or 50 to 900 DEFAULT
+        primary: {
+          //... 50 to 900
+          foreground: "#FFFFFF",
+          DEFAULT: "#006FEE",
+        },
+        // ... rest of the colors
+      },
+    },
+    dark: {
+      colors: {
+        background: "#252526", // or DEFAULT
+        foreground: "#ECEDEE", // or 50 to 900 DEFAULT
+        content1: {
+          //... 50 to 900
+          foreground: "#FFFFFF",
+          DEFAULT: "#333333",
+        },
+        default: {
+          //... 50 to 900
+          foreground: "#FFFFFF",
+          DEFAULT: "#737373",
+        },
+        primary: {
+          //... 50 to 900
+          foreground: "#FFFFFF",
+          DEFAULT: "#006FEE",
+        },
+      },
+      // ... rest of the colors
+    },
+    mytheme: {
+
+</passage><passage file_path=src/webview/pages/components/ErrorModal.tsx>
+    <Modal radius="sm" size={"lg"} placement={"center"} isOpen={isOpen} onClose={onClose}>
+      <ModalContent>
+        <ModalHeader className="flex flex-col gap-1">Error</ModalHeader>
+        <ModalBody>
+            <>
+              <p>
+                {errorMessage}
+              </p>
+            </>
+        </ModalBody>
+        <ModalFooter>
+            <Button color="danger" variant="light" onClick={onClose}>
+                Close
+            </Button>
+          </ModalFooter>
+      </ModalContent>
+    </Modal>
+  );
+}
+
+</passage><passage file_path=src/webview/components/CommandLink.tsx>
+export default function CommandLink({ command, args, showAnchorIcon = false, children }: CommandLinkProps) {
+  const anchorRef = useRef<HTMLAnchorElement>(null);
+  const serializedArgs = useMemo(() => (
+    args !== undefined ? encodeURIComponent(JSON.stringify(args)) : undefined
+  ), [args]);
+  const uri = useMemo(() => {
+    let commandUri = `command:${command}`;
+    if (serializedArgs !== undefined) {
+      commandUri += `?${serializedArgs}`;
+    }
+    return commandUri;
+  }, [command, serializedArgs]);
+  const onPressHandler = useCallback(() => {
+    anchorRef.current?.click();
+  }, []);
+
+  return (
+    <>
+      <span className="w-full text-lg text-white hover:text-blue-500 cursor-pointer" onClick={onPressHandler}>{children}</span>
+      {/* create another anchor tag to hold the uri, directly using Link's href doesn't work */}
+      {createPortal(<a ref={anchorRef} className="hidden" href={uri} />, document.body)}
+    </>
+  );
+}
+
+</passage><passage file_path=src/webview/components/CommandLink.tsx>
+import { Link } from '@nextui-org/react';
+import { useCallback, useMemo, useRef } from 'react';
+import { createPortal } from 'react-dom';
+import type { ReactNode } from 'react';
+
+export interface CommandLinkProps {
+  command: string;
+  args?: unknown;
+  showAnchorIcon?: boolean,
+  children?: ReactNode;
+}
+
+export default function CommandLink({ command, args, showAnchorIcon = false, children }: CommandLinkProps) {
+
+</passage><passage file_path=src/webview/pages/components/ForgotPassword.tsx>
+          : <div className="text-danger">Failed to Send Password Reset Email.</div>
+        )}
+      </div>
+    </Form>
+  );
+}
+
+</passage><passage file_path=src/helpers/jaccardDistance.ts>
+export function jaccardDistance(code1:string, code2:string) {
+    // Split the code into arrays of unique words
+    let code1Words = new Set(code1.split(/\W+/));
+    let code2Words = new Set(code2.split(/\W+/));
+
+    // Calculate the intersection of the two sets
+    let intersection = new Set([...code1Words].filter(word => code2Words.has(word)));
+
+    // Calculate the union of the two sets
+    let union = new Set([...code1Words, ...code2Words]);
+
+    // Calculate the Jaccard coefficient
+    let jaccardCoefficient = intersection.size / union.size;
+
+    // Calculate the Jaccard distance
+    let jaccardDistance = 1 - jaccardCoefficient;
+
+    return jaccardDistance;
+}
+
+</passage><passage file_path=src/webview/pages/components/HoverToolTip.tsx>
+import { Tooltip } from "@nextui-org/react";
+import { ReactNode } from "react";
+
+interface HoverTooltipProps {
+    children: ReactNode;
+    content: string;
+    [x: string]: any; // for other props
+}
+
+export const HoverTooltip = ({ children, content, ...props }: HoverTooltipProps) => {
+  const globalCloseDelay = 100; // Set your global close delay here
+
+  return (
+    <Tooltip radius="sm" content={content} placement="bottom-end" closeDelay={globalCloseDelay} {...props}>
+      {children}
+    </Tooltip>
+  );
+};
+
+</passage><passage file_path=src/webview/helpers/LazyHighlighter.tsx>
+import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import hljs from 'highlight.js';
+
+function LazyHighlighter({ language, value }: {language:any, value:any }) {
+  //const ref = useRef<HTMLDivElement>(null);
+
+  if (!language){
+    const result = hljs.highlightAuto(value);
+    language = result.language;
+  }
+
+  return (
+    <div>
+      {(
+        <SyntaxHighlighter language={language} style={atomOneDark}>
+          {value}
+        </SyntaxHighlighter>
+      )}
+    </div>
+  );
+}
+
+export default LazyHighlighter;
+
+</passage>

@@ -1,0 +1,12 @@
+[gui]
+	recentrepo = C:/Users/yugen/community food sharing flatform
+[user]
+	name = Vadla yugendra achari
+	email = 136832751+Vadlayugendraachari@users.noreply.github.com
+[core]
+	editor = \"C:\\Users\\yugen\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
